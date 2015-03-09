@@ -20,5 +20,5 @@ class SomeClass(object):
                           sort_keys=True, indent=4)
 {% endhighlight %}
 
-During my quest for said elegant solution, I found that many people have asked this same question on SO, and very few of the answers, even the _accepted_ ones, came close to being concise as the one above. This won't work in every situation, but I has proved to be a flexible solution thus far for me.
+During my quest for said elegant solution, I found that many people have asked this same question on SO, and very few of the answers, even the _accepted_ ones, came close to being concise as the one above. This won't work in every situation, but it has proved to be a flexible solution for me thus far.
 
