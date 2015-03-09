@@ -9,7 +9,7 @@ image:
   feature:
 date: 2015-03-08T20:36:23-05:00
 ---
-I was recently working on a side project where I wanted to recursively serialize an object that contained a number objects stored in instance variables. While perusing Stack Overflow, I came across this [elegant solution](http://stackoverflow.com/questions/3768895/python-how-to-make-a-class-json-serializable) posted by [Onur Yildirim](http://stackoverflow.com/users/112731/onur-yildirim).
+I was recently working on a side project where I wanted to recursively serialize an object that contained a number objects stored in instance variables. While perusing Stack Overflow, I came across this [elegant solution](http://stackoverflow.com/a/15538391/1684563) posted by [Onur Yildirim](http://stackoverflow.com/users/112731/onur-yildirim).
 
 {% highlight python %}
 import json
