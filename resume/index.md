@@ -40,7 +40,7 @@ tags: [resume]
 * Introduced continuous integration into the development workflow.
 
 
-##### _Software Developer_<span class="right">May. 2014 - Dec. 2014</span>
+##### _Software Developer_<span class="right">May 2014 - Dec. 2014</span>
 
 * Responsible for the creation and maintenance of mobile-friendly user interfaces across the division’s projects.
 * Worked extensively with Python and Django.
