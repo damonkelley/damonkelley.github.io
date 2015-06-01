@@ -87,8 +87,9 @@ tags: [resume]
 ## Education
 ---
 
->#### University of North Texas – College of Music
-_Instrumental Performance, Bachelor of Music_ <span class="right">Aug. 2007 – Aug. 2012</span>
+#### University of North Texas – College of Music
+
+#####_Instrumental Performance, Bachelor of Music_ <span class="right">Aug. 2007 – Aug. 2012</span>
 
 
 * Instrument: Percussion. Minor in Music Theory
