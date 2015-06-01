@@ -1,3 +1,32 @@
 .site-name {
     text-transform: none;
 }
+
+.resume {
+    @extend .page;
+
+    h3 {
+        @include font-size(20);
+    }
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: .2em;
+    }
+    h3, h4, h5, h6 {
+        margin-top: .3em;
+    }
+    ul {
+        font-size: 14px;
+    }
+    .right {
+        float: right;
+    }
+
+    blockquote {
+        font-style: normal;
+    }
+
+    p {
+        margin-bottom: .5em;
+    }
+
+}
