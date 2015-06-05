@@ -28,7 +28,7 @@ tags: [resume]
 
 >### University of North Texas Libraries<small> - Denton, TX</small>
 
-##### _Senior Developer_<span style="float: right;">Dec. 2014 - Present</span>
+##### _Software Developer_<span style="float: right;">Dec. 2014 - Present</span>
 
 * Working extensively with Python and Django.
 * Responsible for development and maintenance of in-house content delivery software suite that receives 200,000+ hits daily.
