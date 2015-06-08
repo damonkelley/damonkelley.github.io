@@ -5,7 +5,7 @@ excerpt:
 tags: [about]
 ---
 
-My name is Damon Kelley and I am a software developer living in Denton, Texas.  I graduated from the University of North Texas back in the the Aughties.
+My name is Damon Kelley and I am a software developer living in Denton, Texas.  I graduated from the University of North Texas back in the Aughties.
 
 **Some irrelevant things about me (aside from the above)**:
 
