@@ -31,7 +31,7 @@ tags: [resume]
 ##### _Software Developer_<span style="float: right;">Dec. 2014 - Present</span>
 
 * Working extensively with Python and Django.
-* Responsible for development and maintenance of in-house content delivery software suite that receives 200,000+ hits daily.
+* Responsible for development and maintenance of in-house content delivery software suite used to make 1,000,000+ digitized scholarly and/or historical artifacts discoverable.
 * Refactoring and modernizing much of the existing legacy software to increase testability, improve maintainability and better reflect coding standards.
 * Responsible for backend and frontend development.
 * Responsible for development and release of the organization’s open-source software packages.
