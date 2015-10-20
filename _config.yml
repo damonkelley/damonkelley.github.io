@@ -1,8 +1,8 @@
 # Site wide configuration
 
-title:            damonkelley.github.io
+title:            damonkelley.me
 locale:           en_US
-url:              http://damonkelley.github.io
+url:              http://damonkelley.me
 
 
 # Jekyll configuration
