@@ -9,7 +9,6 @@ url:              http://damonkelley.me
 
 permalink:   /:categories/:title/
 markdown:    kramdown
-highlighter: pygments
 sass:
   sass_dir: _sass
   style: compressed
@@ -27,12 +26,10 @@ kramdown:
 # Site owner
 owner:
   name: Damon Kelley
-  avatar: dkelley.png
-  bio:  Pythonista, Djangonaut, and baby Gopher.
+  avatar: http://www.gravatar.com/avatar/9a1e91907e3000d3b06944ab7747cf7a
   email: damon.kelley@gmail.com
   disqus-shortname: 
   twitter: damonkelley
-  facebook: damonkelley
   google:
     plus: #damonkelley
     analytics: UA-58410875-1
