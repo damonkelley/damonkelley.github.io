@@ -30,12 +30,12 @@ a { color: #282861; }
   display: flex;
   justify-content: space-around;
   padding: 1em;
-  border-top: #fe8019 dashed 2px;
-  border-bottom: #fe8019 dashed 2px;
+  border-top: #90260a dashed 2px;
+  border-bottom: #90260a dashed 2px;
 }
 
 #links > a {
-  background-color: #ebdbb2;
+  background-color: #b6d0b6;
   padding: .2em;
   margin: .2em;
 }
