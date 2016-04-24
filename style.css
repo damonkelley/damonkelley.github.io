@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,500italic,700);
+
+body {
+  font-family: "Roboto Mono", monospace;
+  margin: auto;
+  margin-top: 3em;
+  padding: 1em;
+  width: 70%;
+  max-width: 900px;
+  background-color: #fff;
+}
+
+#profile {
+  display: flex;
+  justify-content: center;
+}
+
+a { color: #282861; }
+
+#heading .site-title {
+  text-align: center;
+  font-size: 2em;
+  text-decoration: none;
+  color: #000;
+}
+
+#heading .site-title > h3 { font-weight: 100; }
+
+#links {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+  border-top: #fe8019 dashed 2px;
+  border-bottom: #fe8019 dashed 2px;
+}
+
+#links > a {
+  background-color: #ebdbb2;
+  padding: .2em;
+  margin: .2em;
+}
+
+#about {
+  text-align: center;
+}
+
+@media (max-width: 762px) {
+  .site-title {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    width: 90%;
+    /* font-size: 15px; */
+    max-width: 1000px;
+  }
+  #links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
