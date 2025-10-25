@@ -1,0 +1,3 @@
+- Avoid using !important
+- Avoid overriding global styles
+- Avoid overriding global styles
