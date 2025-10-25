@@ -48,6 +48,14 @@ const words = topWords.map(({ word, freq }) => ({
   y: random() * 1080,
   rotation: (random() - 0.5) * 180
 }));
+
+// Generate SVG as a string for background image
+const svgTexts = words.map(({ word, size, x, y, rotation }) =>
+  `<text x="${x}" y="${y}" font-size="${size}" opacity="${0.4 + (size / 5) * 0.6}" transform="rotate(${rotation} ${x} ${y})" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="700" letter-spacing="-0.03em">${word}</text>`
+).join('');
+
+const svgString = `<svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">${svgTexts}</svg>`;
+const encodedSvg = encodeURIComponent(svgString).replace(/'/g, '%27');
 ---
 
 <!doctype html>
@@ -55,52 +63,10 @@ const words = topWords.map(({ word, freq }) => ({
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body>
+	<body style={`background-image: url("data:image/svg+xml,${encodedSvg}"); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;`}>
 		<Header />
 		<main>
-			<svg class="word-cloud" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-				{words.map(({ word, size, x, y, rotation }) => (
-					<text
-						x={x}
-						y={y}
-						font-size={size}
-						opacity={0.4 + (size / 5) * 0.6}
-						transform={`rotate(${rotation} ${x} ${y})`}
-						text-anchor="middle"
-						dominant-baseline="middle"
-					>
-						{word}
-					</text>
-				))}
-			</svg>
 		</main>
 		<Footer />
 	</body>
-	<style>
-		:global(body) {
-			position: relative;
-		}
-		main {
-			padding: 0;
-			margin: 0;
-			max-width: 100%;
-		}
-		.word-cloud {
-			width: 100%;
-			height: 100%;
-		}
-		.word-cloud text {
-			fill: #000;
-			font-family: inherit;
-			font-weight: 700;
-			letter-spacing: -0.03em;
-		}
-		:global(header) {
-			background: rgba(255, 255, 255, 0.9);
-			flex: none;
-		}
-		:global(footer) {
-			margin-top: auto;
-		}
-	</style>
 </html>
