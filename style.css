@@ -1,64 +1,172 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,500italic,700);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
-body {
-  font-family: "Roboto Mono", monospace;
-  font-size: 1.3em;
-  margin: auto;
-  margin-top: 3em;
-  padding: 1em;
-  width: 70%;
-  max-width: 900px;
-  background-color: #fff;
+:root {
+  --color-text: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-background: #ffffff;
+  --color-border: #e5e7eb;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
 }
 
-#profile {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
-a { color: #282861; }
-
-#heading .site-title {
+header {
   text-align: center;
-  font-size: 2em;
-  text-decoration: none;
-  color: #000;
+  margin-bottom: var(--spacing-lg);
 }
 
-#heading .site-title > h3 { font-weight: 100; }
+.profile {
+  margin-bottom: var(--spacing-md);
+}
 
-#links {
+.profile-photo {
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+.site-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-bottom: 0;
+}
+
+.links {
   display: flex;
-  justify-content: space-around;
-  padding: 1em;
-  border-top: #90260a dashed 2px;
-  border-bottom: #90260a dashed 2px;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  margin: var(--spacing-lg) 0;
+  padding: var(--spacing-md) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
-#links > a {
-  background-color: #b6d0b6;
-  padding: .2em;
-  margin: .2em;
+.links a {
+  color: var(--color-text);
+  text-decoration: none;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-weight: 400;
+  border: 1px solid transparent;
 }
 
-#about {
+.links a:hover {
+  color: var(--color-accent);
+  background-color: rgba(37, 99, 235, 0.05);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.links a:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.about {
   text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 560px;
+  margin: 0 auto;
 }
 
-@media (max-width: 762px) {
-  .site-title {
-    font-size: 2em;
-  }
+.about p {
+  margin-bottom: var(--spacing-sm);
 }
 
-@media (max-width: 500px) {
+/* Responsive Design */
+@media (max-width: 768px) {
   body {
-    width: 90%;
-    /* font-size: 15px; */
-    max-width: 1000px;
+    font-size: 16px;
   }
-  #links {
+
+  main {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .site-title {
+    font-size: 2rem;
+  }
+
+  .links {
+    gap: var(--spacing-xs);
+  }
+
+  .links a {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  .site-title {
+    font-size: 1.75rem;
+  }
+
+  .links {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: var(--spacing-xs);
+  }
+
+  .links a {
+    text-align: center;
+  }
+
+  .about {
+    font-size: 1rem;
+  }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
