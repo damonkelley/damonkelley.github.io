@@ -1,0 +1,33 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="About" description="About Damon Kelley" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<article>
+				<h1>About</h1>
+				<p>
+					I'm a software developer based in Brooklyn, New York. I build web applications
+					and work with distributed systems.
+				</p>
+				<p>
+					Currently interested in systems design, developer tooling, and making software
+					that's both reliable and easy to maintain.
+				</p>
+				<p>
+					You can find me on <a href="https://github.com/damonkelley">GitHub</a> or reach out via
+					<a href="mailto:damon.kelley@gmail.com">email</a>.
+				</p>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

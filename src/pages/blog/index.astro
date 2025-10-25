@@ -1,0 +1,94 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="Writing" description={SITE_DESCRIPTION} />
+		<style>
+			h1 {
+				margin-bottom: 3rem;
+			}
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			ul li {
+				margin-bottom: 3rem;
+				padding-bottom: 3rem;
+				border-bottom: 2px solid rgb(var(--gray-light));
+			}
+			ul li:last-child {
+				border-bottom: none;
+			}
+			ul li a {
+				text-decoration: none;
+				color: inherit;
+			}
+			.post-title {
+				font-size: 1.5rem;
+				font-weight: 700;
+				margin: 0 0 0.5rem 0;
+				color: #000;
+				letter-spacing: -0.02em;
+			}
+			.post-link:hover .post-title {
+				text-decoration: underline;
+				text-decoration-thickness: 2px;
+				text-underline-offset: 3px;
+			}
+			.date {
+				margin: 0;
+				font-size: 0.875rem;
+				color: #666;
+			}
+			@media (max-width: 768px) {
+				h1 {
+					margin-bottom: 2rem;
+				}
+				ul li {
+					margin-bottom: 2rem;
+					padding-bottom: 2rem;
+				}
+				.post-title {
+					font-size: 1.25rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Writing</h1>
+			<section>
+				<ul>
+					{
+						posts.map((post) => (
+							<li>
+								<a href={`/blog/${post.id}/`} class="post-link">
+									<h2 class="post-title">{post.data.title}</h2>
+									<p class="date">
+										<FormattedDate date={post.data.pubDate} />
+									</p>
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
