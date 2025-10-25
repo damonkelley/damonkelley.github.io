@@ -1,0 +1,71 @@
+---
+const today = new Date();
+---
+
+<footer>
+	<div class="container">
+		<div class="footer-content">
+			<p class="copyright">&copy; {today.getFullYear()} Damon Kelley</p>
+			<nav class="social-links">
+				<a href="https://github.com/damonkelley">GitHub</a>
+				<a href="mailto:damon.kelley@gmail.com">Email</a>
+			</nav>
+		</div>
+	</div>
+</footer>
+<style>
+	footer {
+		padding: 3rem 0;
+		margin-top: 6rem;
+	}
+	.container {
+		max-width: 720px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+	.footer-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+	.copyright {
+		margin: 0;
+		font-size: 0.875rem;
+		color: #666;
+	}
+	.social-links {
+		display: flex;
+		gap: 1.5rem;
+	}
+	.social-links a {
+		font-size: 0.875rem;
+		text-decoration: none;
+		color: #666;
+		border-bottom: 1px solid transparent;
+		transition: all 0.2s ease;
+	}
+	.social-links a:hover {
+		color: #000;
+		border-bottom-color: #000;
+	}
+	@media (max-width: 768px) {
+		.container {
+			padding: 0 1.5rem;
+		}
+	}
+	@media (max-width: 480px) {
+		footer {
+			padding: 2rem 0;
+			margin-top: 4rem;
+		}
+		.container {
+			padding: 0 1rem;
+		}
+		.footer-content {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+</style>
