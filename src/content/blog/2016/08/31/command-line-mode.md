@@ -35,7 +35,7 @@ Let's reintroduce ourselves to Command-line mode really quick. Perhaps you have 
 
 There are few ways that we can activate Command-line mode. The most basic is by pressing `q:` while in Normal mode. The combination should open a focus a window like the one below.
 
-![command-line mode](../../assets/2016-08-31-command-line-mode/command-line-mode.png)
+![command-line mode](/images/2016-08-31-command-line-mode/command-line-mode.png)
 
 You will notice that we can navigate this buffer just like any other buffer. `j` and `k` will move us up and down. `gg` and `G` will take us to the beginning and end of the buffer. Essentially, we are in Normal mode, in a buffer that contains our command history.
 
@@ -53,13 +53,13 @@ Still though, I realize it might still be hard to see the real benefit of this m
 
 You may have found yourself wishing that you could use Normal mode motions and operations to edit a command that you are working on.
 
-![complete-command](../../assets/2016-08-31-command-line-mode/edit-command.png)
+![complete-command](/images/2016-08-31-command-line-mode/edit-command.png)
 
 With simple ex commands, we are limited to the mappings listed here `:h cmdline-editing`.
 
 Luckily, we can use `CTRL-f` in the middle of typing an ex command to enter Command-line mode with the pending command.
 
-![complete-command](../../assets/2016-08-31-command-line-mode/edit-command-mode.png)
+![complete-command](/images/2016-08-31-command-line-mode/edit-command-mode.png)
 
 
 #### Copy and paste your previous commands
@@ -73,13 +73,13 @@ Perhaps you would like to replace a particular word in a buffer, but you are a l
 
 In Command-line mode you can use Vim's built-in completion to autocomplete a word.
 
-![complete-command](../../assets/2016-08-31-command-line-mode/complete-command.png)
+![complete-command](/images/2016-08-31-command-line-mode/complete-command.png)
 
 #### Navigate your recent searches
 
 `q:` will list the previous commands, but `q/` and `q?` will provide you with a history of searches.
 
-![searches](../../assets/2016-08-31-command-line-mode/searches.png)
+![searches](/images/2016-08-31-command-line-mode/searches.png)
 
 
 ### Wrap up
