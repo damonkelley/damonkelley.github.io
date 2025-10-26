@@ -2,9 +2,9 @@
 title: Hygienic Macros
 description: 'Understanding hygienic macro systems and why they matter - preventing unintended variable capture and binding issues.'
 pubDate: 'Aug 23 2016'
-layout: post
 date: 2016-08-23 04:04 UTC
 tags: macros, C, elixir
+archived: true
 ---
 
 Q: **What is a hygienic macro system and why do I should I care about it.**

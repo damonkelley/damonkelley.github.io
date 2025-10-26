@@ -2,9 +2,9 @@
 title: "1 Test, 1 Assertion?"
 description: 'Exploring when to use single versus multiple assertions in tests - being pragmatic about testing stateful behavior.'
 pubDate: 'Jun 30 2016'
-layout: post
 date: 2016-06-30 02:47 UTC
 tags: testing
+archived: true
 ---
 
 Should each of our tests have a single assertion, or is it OK for a test to contain multiple assertions?

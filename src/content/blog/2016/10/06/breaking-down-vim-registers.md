@@ -2,9 +2,9 @@
 title: Breaking Down Vim Registers
 description: 'A comprehensive guide to Vim registers - unnamed, numbered, named, and read-only registers for storing and retrieving text.'
 pubDate: 'Oct 06 2016'
-layout: post
 date: 2016-10-06 02:27 UTC
 tags: vim, vim registers
+archived: true
 ---
 
 Registers is one of the places where Vim stores its states. Whenever you delete text, yank text, or run a command, a register is modified. Furthermore, registers are also where we, as users, can store any information that is worth persisting short term. You can inspect the state of your registers by running the `:reg` command.

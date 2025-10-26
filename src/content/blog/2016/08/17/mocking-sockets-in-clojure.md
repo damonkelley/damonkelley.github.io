@@ -2,9 +2,9 @@
 title: Mocking Sockets in Clojure
 description: 'Creating test doubles for Java Socket objects in Clojure using proxy and closures for testing socket-based applications.'
 pubDate: 'Aug 17 2016'
-layout: post
 date: 2016-08-17 13:07 UTC
 tags: clojure, java, mocking, sockets
+archived: true
 ---
 
 In Clojure-land we have access to a vast number of libraries via Java interop. We are free to create Java objects, and call methods on those objects, methods that might mutate the state of those objects.

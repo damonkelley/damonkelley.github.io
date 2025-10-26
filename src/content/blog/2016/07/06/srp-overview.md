@@ -2,9 +2,9 @@
 title: "The Single Responsibility Principle: Overview"
 description: 'Introduction to the Single Responsibility Principle - a class should have only one reason to change.'
 pubDate: 'Jul 06 2016'
-layout: post
 date: 2016-07-06 03:23 UTC
 tags: SRP, SOLID
+archived: true
 ---
 
 The Single Responsibility Principle states that a class must have only one reason to change.

@@ -2,9 +2,9 @@
 title: "TDD Patterns: Triangulation"
 description: 'Using triangulation to drive out behavior by adding more assertions to tests, preventing naive implementations from passing.'
 pubDate: 'Jun 23 2016'
-layout: post
 date: 2016-06-23 03:08 UTC
 tags: tdd, patterns, triangulation, apprenticeship
+archived: true
 ---
 
 

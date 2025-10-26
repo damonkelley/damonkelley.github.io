@@ -2,9 +2,9 @@
 title: "SRP & ISP - Part 1"
 description: 'Exploring how the Interface Segregation Principle applies SRP to interfaces - making them smaller and more cohesive.'
 pubDate: 'Jul 12 2016'
-layout: post
 date: 2016-07-12 05:01 UTC
 tags: SRP, ISP, SOLID
+archived: true
 ---
 
 The Interface-Segregation Principle states that _clients should not be forced to depend on methods that they do not use_.

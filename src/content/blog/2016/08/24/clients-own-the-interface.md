@@ -2,9 +2,9 @@
 title: Clients Own the Interface
 description: 'A deeper look at the Dependency Inversion Principle - understanding that clients should own the interfaces they depend on.'
 pubDate: 'Aug 24 2016'
-layout: post
 date: 2016-08-24 01:26 UTC
 tags: DIP
+archived: true
 ---
 
 <style>

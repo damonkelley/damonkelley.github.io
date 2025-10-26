@@ -2,9 +2,9 @@
 title: Apprenticeship Retro
 description: 'Reflecting on my 8th Light apprenticeship journey - books read, blogs written, projects completed, and lessons learned.'
 pubDate: 'Oct 14 2016'
-layout: post
 date: 2016-10-14 04:18 UTC
 tags: apprenticeship, learning
+archived: true
 ---
 
 At the time of this writing I have approximately two weeks until the my apprenticeship comes to a close. I will not be blogging during the these last two weeks, so for what is likely to be my last blog post as an apprentice, I wanted to reflect on what I have since June.

@@ -2,9 +2,9 @@
 title: Defining Named Functions with a List Comprehension
 description: 'A cool pattern in Elixir - using list comprehensions to generate multiple named function definitions at compile time.'
 pubDate: 'Aug 19 2016'
-layout: post
 date: 2016-08-19 13:59 UTC
 tags: macros, elixir
+archived: true
 ---
 
 I was perusing an Elixir project<sup>1</sup> a few months ago, and I came across a really cool pattern. In Elixir, you can define named functions using a list comprehension.

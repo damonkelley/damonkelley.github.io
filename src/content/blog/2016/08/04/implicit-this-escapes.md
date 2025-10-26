@@ -2,9 +2,9 @@
 title: Thread Safety with Inner Classes
 description: 'Understanding how implicit "this" references can escape inner classes and cause thread safety issues in Java.'
 pubDate: 'Aug 04 2016'
-layout: post
 date: 2016-08-04 14:13 UTC
 tags: java, concurrency, thread safety
+archived: true
 ---
 
 In chapter 3 of _Java Concurrency in Practice_, there is a particular example that I had some trouble understanding.

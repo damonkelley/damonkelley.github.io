@@ -2,9 +2,9 @@
 title: The Circuit Breaker
 description: 'Implementing the Circuit Breaker stability pattern to protect against failures from unavailable services or resources.'
 pubDate: 'Sep 30 2016'
-layout: post
 date: 2016-09-30 03:24 UTC
 tags: stability pattern, pattern, failure handling
+archived: true
 ---
 
 The Circuit Breaker is one of the stability patterns discussed in Michael Nygard's _Release It!_. This pattern is pattern designed to emulate a circuit breaker found in any residential home.

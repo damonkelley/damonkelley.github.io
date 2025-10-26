@@ -2,9 +2,9 @@
 title: The Three Rules and red/green/refactor
 description: "Understanding the difference between Uncle Bob's Three Rules of TDD and the red/green/refactor cycle - they're not the same thing."
 pubDate: 'Jul 01 2016'
-layout: post
 date: 2016-07-01 04:11 UTC
 tags: tdd, apprenticeship
+archived: true
 ---
 
 On my first day of my apprenticeship, one of my mentors asked me if I knew the Three Rules of TDD. I confidently responded, "red, green, refactor".

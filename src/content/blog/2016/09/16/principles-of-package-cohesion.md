@@ -2,9 +2,9 @@
 title: The Principles of Package Cohesion
 description: 'Exploring the three principles of package cohesion - REP, CRP, and CCP - for allocating classes to packages effectively.'
 pubDate: 'Sep 16 2016'
-layout: post
 date: 2016-09-16 03:38 UTC
 tags: Principles of Package Design, cohesion, packages
+archived: true
 ---
 
 The Principles of Package Design are principles to help us design packages. The Principles of Package Cohesion are a subset of the Principles of Package Design that deal with how to allocate classes to packages.

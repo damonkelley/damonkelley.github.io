@@ -2,9 +2,9 @@
 title: "Command-line Mode"
 description: "Exploring Vim's Command-line mode - one of the lesser-known modes that enables powerful command history features."
 pubDate: 'Aug 31 2016'
-layout: post
 date: 2016-08-31 02:49 UTC
 tags: vim
+archived: true
 ---
 
 <style>

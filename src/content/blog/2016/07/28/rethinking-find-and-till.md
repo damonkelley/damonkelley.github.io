@@ -2,9 +2,9 @@
 title: Rethinking Find and Till
 description: "Why Vim's find and till motions are hard to adopt, and how rethinking their use can make them more practical and less about precision."
 pubDate: 'Jul 28 2016'
-layout: post
 date: 2016-07-28 04:06 UTC
 tags: vim
+archived: true
 ---
 
 

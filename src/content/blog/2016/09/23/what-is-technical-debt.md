@@ -2,9 +2,9 @@
 title: What is Technical Debt?
 description: "Exploring Ward Cunningham's original debt metaphor - it's about incomplete understanding, not sloppy code."
 pubDate: 'Sep 23 2016'
-layout: post
 date: 2016-09-23 04:57 UTC
 tags: technical debt
+archived: true
 ---
 
 Ward Cunningham is credited with coming up with the debt metaphor. This is the same "technical debt" metaphor that is so often associated with poorly written code.

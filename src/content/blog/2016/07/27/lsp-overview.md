@@ -2,9 +2,9 @@
 title: "Liskov Substitution Principle: An Overview"
 description: 'Introduction to the Liskov Substitution Principle - subtypes must be substitutable for their base types to maintain expected behavior.'
 pubDate: 'Jul 27 2016'
-layout: post
 date: 2016-07-27 05:17 UTC
 tags: SOLID, LSP
+archived: true
 ---
 
 The Liskov Substitution Principle (LSP) is the `L` in the 5 SOLID Object Oriented Design principles.

@@ -2,9 +2,9 @@
 title: Project Specific Vim Configuration
 description: "Using Vim's built-in exrc setting to enable project-specific configurations without plugins."
 pubDate: 'Sep 23 2016'
-layout: post
 date: 2016-09-23 02:38 UTC
 tags: vim, ephemeral vim settings
+archived: true
 ---
 
 Sometimes I come across a setting that I need, but only in a specific context. Perhaps the context is the language, or a particular type of buffer.

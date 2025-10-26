@@ -2,9 +2,9 @@
 title: "The Single Responsibility Principle: Identifying Violators"
 description: 'Techniques for identifying Single Responsibility Principle violations - summaries, method prefixes, and abstraction levels.'
 pubDate: 'Jul 07 2016'
-layout: post
 date: 2016-07-07 05:24 UTC
 tags: SRP, SOLID, smells
+archived: true
 ---
 
 Realizing that a class is violating The Single Responsibility Principle tends to be much more difficult that resolving the violations.

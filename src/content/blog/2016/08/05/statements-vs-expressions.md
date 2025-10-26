@@ -2,9 +2,9 @@
 title: Statements & Expressions
 description: 'Clarifying the difference between statements and expressions in programming languages - actions versus values.'
 pubDate: 'Aug 05 2016'
-layout: post
 date: 2016-08-05 04:10 UTC
 tags: programming languages, expressions, statements
+archived: true
 ---
 
 Ever been confused about the difference between and expression and a statement? Maybe you used them interchangeably?

@@ -2,9 +2,9 @@
 title: import *
 description: 'Why wildcard imports are problematic - they hide design flaws and obfuscate module dependencies that could reveal code smells.'
 pubDate: 'Jun 29 2016'
-layout: post
 date: 2016-06-29 03:09 UTC
 tags: smells
+archived: true
 ---
 
 Many languages have the ability to import modules. The syntax for importing varies slightly, but a common convenience is the wildcard import. This allows you to import everything that is housed within a namespace. Lets at look two examples of this.

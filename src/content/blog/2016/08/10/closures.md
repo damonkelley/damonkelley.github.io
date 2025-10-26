@@ -2,9 +2,9 @@
 title: Closures
 description: 'Explaining closures and free variables - how functions capture and retain access to variables from their enclosing scope.'
 pubDate: 'Aug 10 2016'
-layout: post
 date: 2016-08-10 14:07 UTC
 tags: closures, lexical closures, free variables
+archived: true
 ---
 
 

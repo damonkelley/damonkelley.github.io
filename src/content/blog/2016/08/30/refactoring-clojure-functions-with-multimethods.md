@@ -5,6 +5,7 @@ pubDate: 'Aug 30 2016'
 laytout: post
 date: 2016-08-30 04:10 UTC
 tags: clojure, refactoring, multimethods
+archived: true
 ---
 
 Parallel Change is a refactoring pattern that is outlined [here](http://martinfowler.com/bliki/ParallelChange.html). Essentially the idea is that we can extend an existing interface to support new functionality, migrate all of the clients to use the new methods, and then kill the old methods once all of the clients are using the new methods. Another name for this pattern is *expand and contract*.

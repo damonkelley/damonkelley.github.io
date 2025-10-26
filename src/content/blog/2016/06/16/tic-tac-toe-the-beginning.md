@@ -2,9 +2,9 @@
 title: "Tic-Tac-Toe: The Beginning"
 description: 'Starting my first apprenticeship project: building an unbeatable Tic-Tac-Toe game using TDD and the minimax algorithm.'
 pubDate: 'Jun 16 2016'
-layout: post
 date: 2016-06-16 03:31 UTC
 tags: apprenticeship, java, tictactoe, tdd
+archived: true
 ---
 
 ### A bit of background

@@ -2,9 +2,9 @@
 title: Referential Transparency
 description: 'Understanding referential transparency - when expressions can be replaced with their evaluated values without changing program behavior.'
 pubDate: 'Aug 12 2016'
-layout: post
 date: 2016-08-12 05:14 UTC
 tags: referential transparency
+archived: true
 ---
 
 Referential transparency is a property of an expression, where an expression can be replaced with the value it evaluates to. (**Related**: _Pure functions_)

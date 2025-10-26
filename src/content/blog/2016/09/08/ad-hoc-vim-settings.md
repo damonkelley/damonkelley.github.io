@@ -2,9 +2,9 @@
 title: From Workflow Inefficiency to an Ad Hoc Autotest
 description: 'Creating an ad-hoc test runner in Vim using tmux send-keys to eliminate workflow friction when running tests.'
 pubDate: 'Sep 08 2016'
-layout: post
 date: 2016-09-08 03:39 UTC
 tags: vim, workflow
+archived: true
 ---
 
 I was pairing with a coworker last week on a throw-away Elixir project. We working on my pair's machine, using Vim inside of a tmux instance.
