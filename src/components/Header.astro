@@ -4,7 +4,7 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<div class="container">
-		<a href="/" class="site-title">{SITE_TITLE}</a>
+		<a href="/" class="site-title highlight">{SITE_TITLE}</a>
 		<nav>
 			<a href="/blog">Writing</a>
 			<a href="/about">About</a>
@@ -33,39 +33,6 @@ import { SITE_TITLE } from '../consts';
 		color: #000;
 		letter-spacing: -0.02em;
 		text-decoration-thickness: 0;
-		position: relative;
-		display: inline-block;
-		z-index: 1;
-	}
-	.site-title::before {
-		content: '';
-		position: absolute;
-		left: -0.35em;
-		right: -0.25em;
-		top: 22%;
-		bottom: 12%;
-		background: #FFD700;
-		opacity: 0.5;
-		z-index: -1;
-		pointer-events: none;
-		transform: rotate(-1.5deg) translateY(2px);
-		border-radius: 8px 3px 6px 4px;
-		filter: blur(0.5px);
-	}
-	.site-title::after {
-		content: '';
-		position: absolute;
-		left: -0.25em;
-		right: -0.35em;
-		top: 28%;
-		bottom: 18%;
-		background: #FFD700;
-		opacity: 0.45;
-		z-index: -1;
-		pointer-events: none;
-		transform: rotate(0.5deg) translateY(-1px);
-		border-radius: 4px 7px 3px 9px;
-		filter: blur(0.5px);
 	}
 	.site-title:hover {
 		text-decoration: none;
