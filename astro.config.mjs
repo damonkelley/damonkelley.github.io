@@ -8,7 +8,4 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
 	site: 'https://damonkelley.github.io',
 	integrations: [mdx(), sitemap()],
-    redirects: {
-        '/': '/blog'
-    }
 });
