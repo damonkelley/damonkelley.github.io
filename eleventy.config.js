@@ -9,7 +9,7 @@ export default function (eleventyConfig) {
     type: "atom",
     outputPath: "/rss.xml",
     collection: {
-      name: "posts",
+      name: "feed",
       limit: 0,
     },
     metadata: {
@@ -25,6 +25,13 @@ export default function (eleventyConfig) {
     },
   });
 
+
+
+  eleventyConfig.addCollection("feed", (collectionApi) => {
+    const posts = collectionApi.getFilteredByTag("posts").filter((p) => !p.data.archived);
+    const notes = collectionApi.getFilteredByTag("notes");
+    return [...posts, ...notes].sort((a, b) => b.date - a.date);
+  });
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return new Date(dateObj).toLocaleDateString("en-us", {

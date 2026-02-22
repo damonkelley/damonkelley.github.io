@@ -6,16 +6,21 @@ description: "Writing, building, and thinking about how humans and software shap
 <h1>Writing</h1>
 <div class="h-feed">
   <ul>
-    {%- for post in collections.posts | reverse -%}
-    {%- if not post.data.archived -%}
+    {%- for item in collections.feed -%}
     <li class="h-entry">
-      <a href="{{ post.url }}" class="u-url">
-        <h2 class="p-name">{{ post.data.title }}</h2>
-        <p class="p-summary">{{ post.data.description }}</p>
-        <time class="dt-published" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+      {%- if item.data.title -%}
+      <a href="{{ item.url }}" class="u-url">
+        <h2 class="p-name">{{ item.data.title }}</h2>
+        <p class="p-summary">{{ item.data.description }}</p>
+        <time class="dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate }}</time>
       </a>
+      {%- else -%}
+      <div class="e-content">{{ item.content | safe }}</div>
+      <a href="{{ item.url }}" class="u-url">
+        <time class="dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate }}</time>
+      </a>
+      {%- endif -%}
     </li>
-    {%- endif -%}
     {%- endfor -%}
   </ul>
 </div>
