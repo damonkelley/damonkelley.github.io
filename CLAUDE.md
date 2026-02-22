@@ -9,12 +9,13 @@ Personal blog built with Eleventy (11ty) v3. Nunjucks templates. Deployed to Net
 **Site URL:** https://damonkelley.com
 
 ## Development Commands
-
 ```bash
-bun install       # Install dependencies
-bun run dev       # Start dev server with live reload
-bun run build     # Build production site to ./_site/
-bun run preview   # Same as dev (11ty --serve)
+bun install              # Install dependencies
+bun run dev              # Start dev server with live reload
+bun run build            # Build production site to ./_site/
+bun run preview          # Same as dev (11ty --serve)
+bun run bridge:sync      # Dry-run: show bridged posts not in RSS feed
+bun run bridge:sync:send # Send delete webmentions for orphaned posts
 ```
 
 ## Architecture
@@ -48,20 +49,26 @@ bun run preview   # Same as dev (11ty --serve)
 
 ### Configuration
 
-- `eleventy.config.js` — Passthrough copy, RSS feed plugin, date filters, `excerpt` filter, feed collection
+- `eleventy.config.js` — Passthrough copy, RSS plugin (filters only), date filters, `excerpt` filter, feed collection
+- `src/feed.njk` — Manual Atom feed template (includes `u-bridgy-fed` link in each entry's content for webmention.app discovery)
 - `netlify.toml` — Build config, Bridgy Fed WebFinger/host-meta proxy redirects
 - `.pages.yml` — Pages CMS configuration for articles and notes
+- `scripts/bridge-sync.js` — Compares Bluesky bridged posts against RSS feed, sends delete webmentions for orphans
 - Input: `src/`, Output: `_site/`
 
 ### Static Assets
 
 - `public/` — Passthrough copied to site root (favicon, fonts, images, OG default image)
 
-### IndieWeb
-
+### IndieWeb / Bridgy Fed
 - Microformats2: `h-entry` on articles/notes, `h-card` in footer, `h-feed` on listing pages
 - Webmentions: received via webmention.io, displayed via client-side JS in `webmentions.njk`
-- Bridgy Fed: `u-bridgy-fed` link in article/note templates; in webmention-only mode (new posts require sending a webmention to `https://fed.brid.gy/webmention`)
+- Bridgy Fed: bridges site to fediverse and Bluesky via webmention-only mode
+  - `u-bridgy-fed` link in article/note templates (outside `e-content`, inside `h-entry` to avoid Mastodon link previews)
+  - `u-bridgy-fed` link also in RSS feed `<content>` (in `src/feed.njk`) so webmention.app can discover it
+  - **New posts**: automated via webmention.app Netlify webhook (deploy succeeded → scans RSS → sends webmentions)
+  - **Deleted posts**: run `bun run bridge:sync:send` after deleting content and deploying (posts must return 404 first)
+  - DID: `did:plc:h7u3m47syy7vkuewhms6oest`
 - `p-summary`: present on articles (from `description`) and notes (from truncated content) for clean federation
 
 ### Social Metadata
