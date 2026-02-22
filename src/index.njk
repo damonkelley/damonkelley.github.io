@@ -4,17 +4,19 @@ title: Writing
 description: "Writing, building, and thinking about how humans and software shape each other."
 ---
 <h1>Writing</h1>
-<ul>
-  {%- for post in collections.posts | reverse -%}
-  {%- if not post.data.archived -%}
-  <li>
-    <a href="{{ post.url }}">
-      <h2>{{ post.data.title }}</h2>
-      <p>{{ post.data.description }}</p>
-      <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-    </a>
-  </li>
-  {%- endif -%}
-  {%- endfor -%}
-</ul>
+<div class="h-feed">
+  <ul>
+    {%- for post in collections.posts | reverse -%}
+    {%- if not post.data.archived -%}
+    <li class="h-entry">
+      <a href="{{ post.url }}" class="u-url">
+        <h2 class="p-name">{{ post.data.title }}</h2>
+        <p class="p-summary">{{ post.data.description }}</p>
+        <time class="dt-published" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+      </a>
+    </li>
+    {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</div>
 <p><em>Can't find what you are looking for? Check the <a href="/archive/">archive</a>.</em></p>

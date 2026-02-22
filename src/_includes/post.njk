@@ -1,13 +1,17 @@
 ---
 layout: base.njk
 ---
-<article>
+<article class="h-entry">
   <header>
-    <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+    <time class="dt-published" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
     {% if updatedDate %}
-    <p>Updated: <time datetime="{{ updatedDate | htmlDateString }}">{{ updatedDate | readableDate }}</time></p>
+    <p>Updated: <time class="dt-updated" datetime="{{ updatedDate | htmlDateString }}">{{ updatedDate | readableDate }}</time></p>
     {% endif %}
-    <h1>{{ title }}</h1>
+    <h1 class="p-name">{{ title }}</h1>
   </header>
-  {{ content | safe }}
+  <div class="e-content">
+    {{ content | safe }}
+  </div>
+  <a class="u-url" href="{{ page.url }}" hidden></a>
+  <a class="p-author h-card" href="/" hidden>{{ metadata.author.name }}</a>
 </article>
