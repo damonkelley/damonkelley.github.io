@@ -42,10 +42,16 @@ content:
           values:
             - value: draft
               label: Draft
+            - value: hidden
+              label: Hidden
             - value: published
               label: Published
             - value: archived
               label: Archived
+      - name: federate
+        label: Federate
+        type: boolean
+        default: true
       - name: body
         label: Body
         type: rich-text
@@ -81,10 +87,16 @@ content:
           values:
             - value: draft
               label: Draft
+            - value: hidden
+              label: Hidden
             - value: published
               label: Published
             - value: archived
               label: Archived
+      - name: federate
+        label: Federate
+        type: boolean
+        default: true
       - name: body
         label: Body
         type: rich-text

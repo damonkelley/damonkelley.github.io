@@ -15,6 +15,6 @@ layout: base.njk
   <p class="p-summary" hidden>{{ description or (content | excerpt) }}</p>
   <a class="u-url" href="{{ page.url }}" hidden></a>
   <a class="p-author h-card" href="/" hidden>{{ metadata.author.name }}</a>
-  <a class="u-bridgy-fed" href="https://fed.brid.gy/" hidden></a>
+  {% if status === "published" and federate %}<a class="u-bridgy-fed" href="https://fed.brid.gy/" hidden></a>{% endif %}
 </article>
 {% include "webmentions.njk" %}

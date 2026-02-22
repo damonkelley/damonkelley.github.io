@@ -2,8 +2,10 @@ export default {
   layout: "note.njk",
   tags: "notes",
   status: "draft",
+  federate: true,
   eleventyComputed: {
-    eleventyExcludeFromCollections: (data) => data.status === "draft",
+    eleventyExcludeFromCollections: (data) =>
+      data.status === "draft" || data.status === "hidden",
     permalink: (data) => data.status === "draft" ? false : data.permalink,
     description: (data) => {
       if (data.description) return data.description;
