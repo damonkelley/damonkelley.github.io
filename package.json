@@ -1,14 +1,14 @@
 {
   "name": "damonkelley-blog",
-  "type": "module",
   "version": "1.0.0",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.0"
+  },
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy",
     "preview": "eleventy --serve"
   },
-  "dependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-plugin-rss": "^2.0.0"
-  }
+  "type": "module"
 }
