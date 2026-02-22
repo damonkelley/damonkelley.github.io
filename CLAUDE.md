@@ -4,58 +4,49 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a static blog site built with Astro 5, based on the Bear Blog theme. The site features a minimal, brutalist design aesthetic with sparing use of color (mustard yellow accent).
+Static blog built with Eleventy (11ty) v3. Nunjucks templates. Deployed to GitHub Pages.
 
 **Site URL:** https://damonkelley.github.io
 
 ## Development Commands
 
 ```bash
-npm run dev       # Start dev server at localhost:4321
-npm run build     # Build production site to ./dist/
-npm run preview   # Preview production build locally
+npm run dev       # Start dev server with live reload
+npm run build     # Build production site to ./_site/
+npm run preview   # Same as dev (11ty --serve)
 ```
 
 ## Architecture
 
-### Content Management
+### Content
 
-Blog posts are managed using Astro's Content Collections API:
-- Posts live in `src/content/blog/` organized by year/month/day directory structure
-- Content is written in Markdown or MDX format
-- Frontmatter schema enforced via `src/content.config.ts`:
-  - `title` (required)
-  - `description` (required)
-  - `pubDate` (required, auto-coerced to Date)
-  - `updatedDate` (optional)
-  - `heroImage` (optional)
+- Blog posts live in `src/blog/` organized by year/month/day directory structure
+ Written in Markdown with frontmatter: `title`, `description`, `date`, `updatedDate` (optional), `heroImage` (optional), `archived` (optional)
+ `src/blog/blog.11tydata.js` assigns the `post.njk` layout and `posts` tag
 
-### Routing
+### Templates (Nunjucks)
 
-- `src/pages/index.astro` - Homepage
-- `src/pages/blog/index.astro` - Blog listing page
-- `src/pages/blog/[...slug].astro` - Dynamic blog post pages (uses content collections)
-- `src/pages/about.astro` - About page
+- `src/_includes/base.njk` — Base HTML shell (head, header, footer)
+- `src/_includes/post.njk` — Blog post layout (extends base)
+- `src/index.njk` — Homepage (non-archived posts)
+- `src/about.njk` — About page
+- `src/archive.njk` — Archived posts
+- `src/sitemap.njk` — XML sitemap
 
-### Styling Architecture
+### Data
 
-**Global styles:** `src/styles/global.css` contains all base styling
-- CSS custom properties defined in `:root` for color system
-- Current accent color: `#D4A017` (mustard yellow) - used sparingly
-- No CSS frameworks, no preprocessors, plain vanilla CSS only
+- `src/_data/metadata.json` — Site title, description, URL, author info
 
-**Component styles:** Scoped `<style>` blocks in `.astro` components
-- `src/components/Header.astro`
-- `src/components/Footer.astro`
-- `src/layouts/BlogPost.astro`
+### Configuration
 
-**Design constraints:**
-- Avoid using !important
-- Avoid overriding global styles
-- Maintain minimal, brutalist aesthetic
+- `eleventy.config.js` — Passthrough copy (`public/` → root), RSS feed plugin, date filters
+- Input: `src/`, Output: `_site/`
 
-### Integrations
+### Static Assets
 
-- `@astrojs/mdx` - MDX support for blog posts
-- `@astrojs/sitemap` - Automatic sitemap generation
-- `@astrojs/rss` - RSS feed generation (configured in site)
+- `public/` — Passthrough copied to site root (favicon, fonts, images)
+
+### Deployment
+
+- GitHub Actions workflow in `.github/workflows/deploy.yml`
+- Builds with Node 22, deploys `_site/` to GitHub Pages

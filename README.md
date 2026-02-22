@@ -1,12 +1,11 @@
 # damonkelley.github.io
 
-Personal website and blog.
+Personal website and blog. Built with [Eleventy](https://www.11ty.dev/).
 
 ## Development
 
 ```bash
-bun install
-bun run dev      # http://localhost:4321
-bun run build
-bun run preview
+npm install
+npm run dev      # http://localhost:8080
+npm run build
 ```

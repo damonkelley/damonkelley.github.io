@@ -1,0 +1,13 @@
+---
+layout: base.njk
+---
+<article>
+  <header>
+    <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+    {% if updatedDate %}
+    <p>Updated: <time datetime="{{ updatedDate | htmlDateString }}">{{ updatedDate | readableDate }}</time></p>
+    {% endif %}
+    <h1>{{ title }}</h1>
+  </header>
+  {{ content | safe }}
+</article>

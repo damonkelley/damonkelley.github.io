@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="{{ metadata.title }}" href="/rss.xml">
+    <link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin>
+  </head>
+  <body>
+    <header>
+      <a href="/">{{ metadata.title }}</a>
+      <nav>
+        <a href="/">Writing</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+    <main>
+      {{ content | safe }}
+    </main>
+    <footer>
+      <p>&copy; {{ "" | year }} {{ metadata.author.name }}</p>
+      <nav>
+        <a href="{{ metadata.author.github }}">GitHub</a>
+        <a href="mailto:{{ metadata.author.email }}">Email</a>
+      </nav>
+    </footer>
+  </body>
+</html>

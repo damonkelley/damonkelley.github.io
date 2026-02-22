@@ -1,0 +1,19 @@
+---
+layout: base.njk
+title: Archive
+description: "Archived blog posts"
+---
+<h1>Archive</h1>
+<ul>
+  {%- for post in collections.posts | reverse -%}
+  {%- if post.data.archived -%}
+  <li>
+    <a href="{{ post.url }}">
+      <h2>{{ post.data.title }}</h2>
+      <p>{{ post.data.description }}</p>
+      <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+    </a>
+  </li>
+  {%- endif -%}
+  {%- endfor -%}
+</ul>
