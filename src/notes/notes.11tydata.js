@@ -4,6 +4,7 @@ export default {
   status: "draft",
   eleventyComputed: {
     eleventyExcludeFromCollections: (data) => data.status === "draft",
+    permalink: (data) => data.status === "draft" ? false : data.permalink,
     description: (data) => {
       if (data.description) return data.description;
       const raw = data.page?.rawInput || "";
