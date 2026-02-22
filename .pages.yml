@@ -47,8 +47,8 @@ content:
       - notes.11tydata.js
     filename: "{year}-{month}-{day}-{hour}{minute}{second}.md"
     view:
-      fields: [date]
-      primary: date
+      fields: [body, date]
+      primary: body
       sort: [date]
       default:
         sort: date
@@ -58,6 +58,10 @@ content:
         label: Date
         type: date
         required: true
+        default: now
+        options:
+          time: true
+          format: yyyy-MM-dd'T'HH:mm
       - name: body
         label: Body
         type: rich-text
