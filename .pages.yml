@@ -39,12 +39,13 @@ content:
         type: select
         default: draft
         options:
-          - value: draft
-            label: Draft
-          - value: published
-            label: Published
-          - value: archived
-            label: Archived
+          values:
+            - value: draft
+              label: Draft
+            - value: published
+              label: Published
+            - value: archived
+              label: Archived
       - name: body
         label: Body
         type: rich-text
@@ -77,12 +78,13 @@ content:
         type: select
         default: draft
         options:
-          - value: draft
-            label: Draft
-          - value: published
-            label: Published
-          - value: archived
-            label: Archived
+          values:
+            - value: draft
+              label: Draft
+            - value: published
+              label: Published
+            - value: archived
+              label: Archived
       - name: body
         label: Body
         type: rich-text
