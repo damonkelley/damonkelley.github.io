@@ -11,3 +11,4 @@ layout: base.njk
   <a class="u-url" href="{{ page.url }}" hidden></a>
   <a class="p-author h-card" href="/" hidden>{{ metadata.author.name }}</a>
 </article>
+{% include "webmentions.njk" %}

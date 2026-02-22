@@ -1,0 +1,90 @@
+<section class="webmentions" id="webmentions" hidden>
+  <h2>Responses</h2>
+  <div id="webmention-replies"></div>
+  <div id="webmention-likes"></div>
+  <div id="webmention-reposts"></div>
+  <div id="webmention-bookmarks"></div>
+</section>
+<script>
+(async function () {
+  var target = "{{ metadata.url }}{{ page.url }}";
+  var url = "https://webmention.io/api/mentions.jf2?target=" + encodeURIComponent(target) + "&per-page=200";
+
+  try {
+    var res = await fetch(url);
+    var data = await res.json();
+
+    if (!data.children || data.children.length === 0) return;
+
+    var replies = [];
+    var likes = [];
+    var reposts = [];
+    var bookmarks = [];
+
+    data.children.forEach(function (mention) {
+      switch (mention["wm-property"]) {
+        case "in-reply-to": replies.push(mention); break;
+        case "like-of": likes.push(mention); break;
+        case "repost-of": reposts.push(mention); break;
+        case "bookmark-of": bookmarks.push(mention); break;
+      }
+    });
+
+    var hasContent = replies.length || likes.length || reposts.length || bookmarks.length;
+    if (!hasContent) return;
+
+    document.getElementById("webmentions").hidden = false;
+
+    if (replies.length) {
+      var container = document.getElementById("webmention-replies");
+      container.innerHTML = "<h3>Replies</h3>" + replies.map(function (r) {
+        var author = r.author || {};
+        var photo = author.photo ? '<img src="' + author.photo + '" alt="' + (author.name || "") + '" width="48" height="48" loading="lazy">' : "";
+        var name = author.name || "Someone";
+        var authorUrl = author.url ? '<a href="' + author.url + '">' + name + "</a>" : name;
+        var date = r.published ? new Date(r.published).toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" }) : "";
+        var content = r.content ? (r.content.text || r.content.html || "") : "";
+        return '<article class="webmention-reply">' +
+          '<header>' + photo + ' ' + authorUrl + (date ? " · <time>" + date + "</time>" : "") + '</header>' +
+          (content ? "<p>" + content + "</p>" : "") +
+          "</article>";
+      }).join("");
+    }
+
+    if (likes.length) {
+      var container = document.getElementById("webmention-likes");
+      container.innerHTML = "<h3>Likes (" + likes.length + ")</h3><div>" +
+        likes.map(function (l) {
+          var author = l.author || {};
+          if (!author.photo) return "";
+          var img = '<img src="' + author.photo + '" alt="' + (author.name || "") + '" width="32" height="32" loading="lazy">';
+          return author.url ? '<a href="' + author.url + '">' + img + "</a>" : img;
+        }).join(" ") + "</div>";
+    }
+
+    if (reposts.length) {
+      var container = document.getElementById("webmention-reposts");
+      container.innerHTML = "<h3>Reposts (" + reposts.length + ")</h3><div>" +
+        reposts.map(function (r) {
+          var author = r.author || {};
+          if (!author.photo) return "";
+          var img = '<img src="' + author.photo + '" alt="' + (author.name || "") + '" width="32" height="32" loading="lazy">';
+          return author.url ? '<a href="' + author.url + '">' + img + "</a>" : img;
+        }).join(" ") + "</div>";
+    }
+
+    if (bookmarks.length) {
+      var container = document.getElementById("webmention-bookmarks");
+      container.innerHTML = "<h3>Bookmarks (" + bookmarks.length + ")</h3><div>" +
+        bookmarks.map(function (b) {
+          var author = b.author || {};
+          if (!author.photo) return "";
+          var img = '<img src="' + author.photo + '" alt="' + (author.name || "") + '" width="32" height="32" loading="lazy">';
+          return author.url ? '<a href="' + author.url + '">' + img + "</a>" : img;
+        }).join(" ") + "</div>";
+    }
+  } catch (e) {
+    // silently fail
+  }
+})();
+</script>
