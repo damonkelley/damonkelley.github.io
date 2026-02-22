@@ -58,7 +58,6 @@ content:
         label: Date
         type: date
         required: true
-        default: now
         options:
           time: true
           format: yyyy-MM-dd'T'HH:mm
