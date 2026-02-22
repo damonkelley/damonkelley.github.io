@@ -4,6 +4,7 @@
   <div id="webmention-likes"></div>
   <div id="webmention-reposts"></div>
   <div id="webmention-bookmarks"></div>
+  <div id="webmention-mentions"></div>
 </section>
 <script>
 (async function () {
@@ -20,6 +21,7 @@
     var likes = [];
     var reposts = [];
     var bookmarks = [];
+    var mentions = [];
 
     data.children.forEach(function (mention) {
       switch (mention["wm-property"]) {
@@ -27,10 +29,11 @@
         case "like-of": likes.push(mention); break;
         case "repost-of": reposts.push(mention); break;
         case "bookmark-of": bookmarks.push(mention); break;
+        case "mention-of": mentions.push(mention); break;
       }
     });
 
-    var hasContent = replies.length || likes.length || reposts.length || bookmarks.length;
+    var hasContent = replies.length || likes.length || reposts.length || bookmarks.length || mentions.length;
     if (!hasContent) return;
 
     document.getElementById("webmentions").hidden = false;
@@ -82,6 +85,17 @@
           var img = '<img src="' + author.photo + '" alt="' + (author.name || "") + '" width="32" height="32" loading="lazy">';
           return author.url ? '<a href="' + author.url + '">' + img + "</a>" : img;
         }).join(" ") + "</div>";
+    }
+
+    if (mentions.length) {
+      var container = document.getElementById("webmention-mentions");
+      container.innerHTML = "<h3>Mentions</h3>" + mentions.map(function (m) {
+        var author = m.author || {};
+        var name = author.name || m["wm-source"] || "Someone";
+        var authorUrl = author.url || m.url;
+        var link = authorUrl ? '<a href="' + authorUrl + '">' + name + "</a>" : name;
+        return "<p>" + link + "</p>";
+      }).join("");
     }
   } catch (e) {
     // silently fail
