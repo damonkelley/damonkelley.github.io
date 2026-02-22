@@ -1,0 +1,18 @@
+---
+layout: base.njk
+title: Micro
+description: "Short-form notes and thoughts."
+---
+<h1>Micro</h1>
+<div class="h-feed">
+  <ul>
+    {%- for note in collections.notes | reverse -%}
+    <li class="h-entry">
+      <div class="e-content">{{ note.content | safe }}</div>
+      <a href="{{ note.url }}" class="u-url">
+        <time class="dt-published" datetime="{{ note.date | htmlDateString }}">{{ note.date | readableDate }}</time>
+      </a>
+    </li>
+    {%- endfor -%}
+  </ul>
+</div>

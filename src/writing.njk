@@ -1,0 +1,22 @@
+---
+layout: base.njk
+title: Writing
+description: "Writing, building, and thinking about how humans and software shape each other."
+---
+<h1>Writing</h1>
+<div class="h-feed">
+  <ul>
+    {%- for article in collections.articles | reverse -%}
+    {%- if not article.data.archived -%}
+    <li class="h-entry">
+      <a href="{{ article.url }}" class="u-url">
+        <h2 class="p-name">{{ article.data.title }}</h2>
+        <p class="p-summary">{{ article.data.description }}</p>
+        <time class="dt-published" datetime="{{ article.date | htmlDateString }}">{{ article.date | readableDate }}</time>
+      </a>
+    </li>
+    {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</div>
+<p><em>Can't find what you are looking for? Check the <a href="/archive/">archive</a>.</em></p>
