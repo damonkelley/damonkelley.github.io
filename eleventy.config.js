@@ -1,29 +1,11 @@
-import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import pluginRss from "@11ty/eleventy-plugin-rss";
 
 export default function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ public: "/" });
 
 
-  eleventyConfig.addPlugin(feedPlugin, {
-    type: "atom",
-    outputPath: "/rss.xml",
-    collection: {
-      name: "feed",
-      limit: 0,
-    },
-    metadata: {
-      language: "en",
-      title: "Damon Kelley",
-      subtitle:
-        "Writing, building, and thinking about how humans and software shape each other.",
-      base: "https://damonkelley.com/",
-      author: {
-        name: "Damon Kelley",
-        email: "mail@damonkelley.com",
-      },
-    },
-  });
+  eleventyConfig.addPlugin(pluginRss);
 
 
 
