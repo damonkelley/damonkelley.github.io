@@ -9,7 +9,7 @@ layout: base.njk
     {% endif %}
     <h1 class="p-name">{{ title }}</h1>
   </header>
-  <div class="e-content">
+  <div>
     {{ content | safe }}
   </div>
   <p class="p-summary" hidden>{{ description or (content | excerpt) }}</p>
