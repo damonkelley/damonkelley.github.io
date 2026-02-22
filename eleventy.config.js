@@ -17,7 +17,7 @@ export default function (eleventyConfig) {
       title: "damon kelley",
       subtitle:
         "Writing, building, and thinking about how humans and software shape each other.",
-      base: "https://damonkelley.github.io/",
+      base: "https://damonkelley.com/",
       author: {
         name: "Damon Kelley",
         email: "mail@damonkelley.com",
