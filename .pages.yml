@@ -3,11 +3,12 @@ media:
   output: /images
 
 content:
-  - name: posts
-    label: Posts
+  - name: articles
+    label: Articles
     type: collection
     path: src/blog
     format: yaml-frontmatter
+    filename: "{year}/{month}/{day}/{primary}.md"
     exclude:
       - blog.11tydata.js
     view:

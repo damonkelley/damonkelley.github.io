@@ -6,7 +6,7 @@ description: "Archived blog posts"
 <h1>Archive</h1>
 <div class="h-feed">
   <ul>
-    {%- for post in collections.posts | reverse -%}
+    {%- for post in collections.articles | reverse -%}
     {%- if post.data.archived -%}
     <li class="h-entry">
       <a href="{{ post.url }}" class="u-url">
