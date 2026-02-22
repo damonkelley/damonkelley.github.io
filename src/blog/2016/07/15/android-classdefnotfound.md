@@ -2,7 +2,7 @@
 title: NoClassDefFoundError
 description: "Understanding Android's Java compilation process and debugging a NoClassDefFoundError caused by missing runtime dependencies."
 date: 2016-07-15
-archived: true
+status: archived
 ---
 
 I have started working on a Android app to fit around my tictactoe project. This is my first endeavor into Android, and mobile application development as a whole. I have had to pick a part a new set of vocabulary, such as Activities, Intents, Fragments, etc., as well as familiarize myself with a more complex project structure. It has been quite a bit to digest in a short amount of time.

@@ -2,7 +2,7 @@
 title: "tmux: send-keys"
 description: 'Using tmux send-keys to emulate keyboard input and automate workflows across panes and windows.'
 date: 2016-09-07
-archived: true
+status: archived
 ---
 
 <style>

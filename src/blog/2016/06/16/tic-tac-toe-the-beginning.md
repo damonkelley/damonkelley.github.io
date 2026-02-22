@@ -2,7 +2,7 @@
 title: "Tic-Tac-Toe: The Beginning"
 description: 'Starting my first apprenticeship project: building an unbeatable Tic-Tac-Toe game using TDD and the minimax algorithm.'
 date: 2016-06-16
-archived: true
+status: archived
 ---
 
 ### A bit of background

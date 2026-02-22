@@ -2,7 +2,7 @@
 title: Creating Event Listeners in Java
 description: 'Demystifying event listeners in Java by building a custom event system for publishing notifications.'
 date: 2016-08-03
-archived: true
+status: archived
 ---
 
 

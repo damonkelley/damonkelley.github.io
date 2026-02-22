@@ -9,9 +9,10 @@ export default function (eleventyConfig) {
 
 
 
+  const isPublished = (p) => p.data.status === "published";
   eleventyConfig.addCollection("feed", (collectionApi) => {
-    const articles = collectionApi.getFilteredByTag("articles").filter((p) => !p.data.archived);
-    const notes = collectionApi.getFilteredByTag("notes");
+    const articles = collectionApi.getFilteredByTag("articles").filter(isPublished);
+    const notes = collectionApi.getFilteredByTag("notes").filter(isPublished);
     return [...articles, ...notes].sort((a, b) => b.date - a.date);
   });
 

@@ -2,7 +2,7 @@
 title: Deliberate Programming with Autotests
 description: 'Using auto-test runners more deliberately with Vim settings to improve TDD workflow and avoid programming by coincidence.'
 date: 2016-08-26
-archived: true
+status: archived
 ---
 
 One thing I am trying to improve on lately is being more deliberate with TDD and refactoring. In that past, it would not be out of the ordinary for me to make a change in a test and blindly make changes in my app code until the tests passed. I would make these changes without calculating what kind of work was ahead of me. I suppose this is a form of programming by coincidence<sup>1</sup>.

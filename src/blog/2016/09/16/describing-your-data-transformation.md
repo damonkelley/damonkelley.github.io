@@ -2,7 +2,7 @@
 title: Describe Your Data Transformation
 description: "Using Clojure's thread macro to create readable data transformations that clearly describe the flow of operations."
 date: 2016-09-16
-archived: true
+status: archived
 ---
 
 One of my favorite features of Clojure is the thread macro. I think there are two reasons I continue to reach for it over and over again.

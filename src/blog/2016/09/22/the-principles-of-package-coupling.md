@@ -2,7 +2,7 @@
 title: The Principles of Package Coupling
 description: 'Understanding the Acyclic-Dependencies, Stable-Dependencies, and Stable-Abstractions principles for reducing package coupling.'
 date: 2016-09-22
-archived: true
+status: archived
 ---
 
 <style>

@@ -2,7 +2,7 @@
 title: Don't override built-ins
 description: 'Learning why overriding built-in function names can cause confusion and how to make better naming decisions.'
 date: 2016-09-29
-archived: true
+status: archived
 ---
 
 Recently, I was working on a Clojure project, and I came across a naming decision. The name I wanted, `resolve`, was taken by `clojure.core/resolve`.

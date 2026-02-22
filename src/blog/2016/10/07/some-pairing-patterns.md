@@ -2,7 +2,7 @@
 title: Some Pairing Patterns
 description: 'Social and behavioral patterns observed during intensive pair programming - checking ego, pulling out information, and stepping up.'
 date: 2016-10-07
-archived: true
+status: archived
 ---
 
 For the past week and a half, I have spent all of each day pair programming. Up to this point I have done some pairing, but not much. After spending more than a week doing it all day everyday, I have noticed a few patterns in my behavior as a pair.

@@ -2,7 +2,7 @@
 title: Learning Testing Tools First
 description: 'Why learning testing tools before diving into a new language or framework can accelerate learning and improve TDD practice.'
 date: 2016-10-07
-archived: true
+status: archived
 ---
 
 Learning a new language or framework can be tough. It can be especially tough when you practice TDD. You need to write tests for code you don't know how to write using testing tools that you don't know how to use yet!

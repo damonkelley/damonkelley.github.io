@@ -2,7 +2,7 @@
 title: "TDD Patterns: Child Test"
 description: 'Exploring the Child Test pattern from Kent Beck - knowing when to back out of a test and write supporting tests first.'
 date: 2016-06-23
-archived: true
+status: archived
 ---
 
 

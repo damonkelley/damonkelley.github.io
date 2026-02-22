@@ -2,7 +2,7 @@
 title: Closures
 description: 'Explaining closures and free variables - how functions capture and retain access to variables from their enclosing scope.'
 date: 2016-08-10
-archived: true
+status: archived
 ---
 
 

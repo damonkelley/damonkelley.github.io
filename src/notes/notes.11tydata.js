@@ -1,7 +1,9 @@
 export default {
   layout: "note.njk",
   tags: "notes",
+  status: "draft",
   eleventyComputed: {
+    eleventyExcludeFromCollections: (data) => data.status === "draft",
     description: (data) => {
       if (data.description) return data.description;
       const raw = data.page?.rawInput || "";

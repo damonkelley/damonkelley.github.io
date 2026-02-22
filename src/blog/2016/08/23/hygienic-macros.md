@@ -2,7 +2,7 @@
 title: Hygienic Macros
 description: 'Understanding hygienic macro systems and why they matter - preventing unintended variable capture and binding issues.'
 date: 2016-08-23
-archived: true
+status: archived
 ---
 
 Q: **What is a hygienic macro system and why do I should I care about it.**

@@ -2,7 +2,7 @@
 title: How Not to Kata
 description: 'Learning the difference between doing a kata once and truly practicing through repetition - the key to unlocking the potential of code katas.'
 date: 2016-06-17
-archived: true
+status: archived
 ---
 
 Coming into my apprenticeship, I knew that katas would play a significant role. As my start date approached, I started doing the popular katas. Katas such as [prime factors](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata), [string calculator](http://osherove.com/tdd-kata-1/), [change maker](http://rubyquiz.com/quiz154.html), and [roman numerals](http://codingdojo.org/cgi-bin/index.pl?KataRomanNumerals). Optimistically, I tried to do one everyday, but realistically I did one once or twice a week.

@@ -2,7 +2,7 @@
 title: Briefly Exploring the Similarities Between LSP and DIP
 description: 'Exploring the relationship between the Liskov Substitution Principle and Dependency Inversion Principle - both encourage flexibility in dependencies.'
 date: 2016-07-29
-archived: true
+status: archived
 ---
 
 What is the relationship between the Dependency Inversion Principle and the Liskov Substitution Principle?

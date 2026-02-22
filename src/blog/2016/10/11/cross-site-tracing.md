@@ -2,7 +2,7 @@
 title: Cross-site Tracing
 description: 'Understanding Cross-site Tracing (XST) attacks and how the HTTP TRACE method can bypass HttpOnly cookie protection.'
 date: 2016-10-11
-archived: true
+status: archived
 ---
 
 Cross-site Tracing or XST is a form of Cross-site Scripting (XSS). One of the ways that Cross-site Scripting is effective is by stealing sensitive information stored in a user's cookies. Access to cookies can be extremely easy with a piece of rogue JavaScript.

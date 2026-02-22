@@ -2,7 +2,7 @@
 title: '"First Post"'
 description: 'Beginning my apprenticeship journey at 8th Light, documenting the ideas, principles, and techniques I encounter along the way.'
 date: 2016-06-13
-archived: true
+status: archived
 ---
 
 Today was the first day of my apprenticeship at 8th Light. I'll be using this blog to flesh out some of the ideas, principles, techniques, and bugs I encounter along the way.

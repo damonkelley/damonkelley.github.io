@@ -2,7 +2,7 @@
 title: "How Not to Kata: Part 2"
 description: 'Understanding the distinction between rehearsing and practicing katas, and the benefits of preparing for a kata performance.'
 date: 2016-06-20
-archived: true
+status: archived
 ---
 
 In my most [recent post](https://blog.damonkelley.me/2016/06/17/how-not-to-kata/), I discussed some of the revelations I had about doing katas, but I failed to communicate the effectiveness of **performing** a kata.

@@ -7,7 +7,7 @@ description: "Archived blog posts"
 <div class="h-feed">
   <ul>
     {%- for post in collections.articles | reverse -%}
-    {%- if post.data.archived -%}
+    {%- if post.data.status === "archived" -%}
     <li class="h-entry">
       <a href="{{ post.url }}" class="u-url">
         <h2 class="p-name">{{ post.data.title }}</h2>

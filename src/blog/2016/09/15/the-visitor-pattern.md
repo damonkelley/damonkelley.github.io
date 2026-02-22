@@ -2,7 +2,7 @@
 title: The Visitor Pattern
 description: 'The Visitor pattern - extending object structure behavior without modifying classes through double dispatch.'
 date: 2016-09-15
-archived: true
+status: archived
 ---
 
 The Visitor is a pattern designed to to extend an object structure's behavior with out opening the classes for modification.

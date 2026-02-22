@@ -2,7 +2,7 @@
 title: Homoiconicity
 description: 'Exploring homoiconicity in programming languages - when code structure matches its internal representation, enabling "code as data".'
 date: 2016-08-16
-archived: true
+status: archived
 ---
 
 Homoiconic literally means _same representation_. In regards to programming languages, a language is homoiconic if the syntax matches the abstract syntax tree. More plainly, the external representation matches the internal representation. Often, this gets boiled down to "code as data" or "data as code". I think this simplification is fine once the we have a grasp of homoiconicity, but before we get to that point, I find the simplification can be opaque.

@@ -2,7 +2,7 @@
 title: The Spectrum of the Observer Pattern
 description: 'Understanding the Observer pattern spectrum - comparing push and pull models for notifying observers of changes.'
 date: 2016-09-09
-archived: true
+status: archived
 ---
 
 The Observer pattern can be implemented on a spectrum. At one end of the spectrum is the pull model, on the other end is the push model.

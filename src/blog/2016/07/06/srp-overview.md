@@ -2,7 +2,7 @@
 title: "The Single Responsibility Principle: Overview"
 description: 'Introduction to the Single Responsibility Principle - a class should have only one reason to change.'
 date: 2016-07-06
-archived: true
+status: archived
 ---
 
 The Single Responsibility Principle states that a class must have only one reason to change.

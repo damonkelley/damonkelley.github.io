@@ -2,7 +2,7 @@
 title: Benefits of The Single Responsibility Principle
 description: 'Three key benefits of the Single Responsibility Principle - reduced coupling, increased testability, and reduced mental energy.'
 date: 2016-07-21
-archived: true
+status: archived
 ---
 
 Lately, I have written quite a few posts about The Single Responsibility Principle, but I have yet to discuss the its benefits.

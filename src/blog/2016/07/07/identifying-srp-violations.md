@@ -2,7 +2,7 @@
 title: "The Single Responsibility Principle: Identifying Violators"
 description: 'Techniques for identifying Single Responsibility Principle violations - summaries, method prefixes, and abstraction levels.'
 date: 2016-07-07
-archived: true
+status: archived
 ---
 
 Realizing that a class is violating The Single Responsibility Principle tends to be much more difficult that resolving the violations.

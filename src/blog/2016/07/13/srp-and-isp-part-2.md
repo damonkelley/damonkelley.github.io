@@ -2,7 +2,7 @@
 title: SRP & ISP - Part 2
 description: 'How the Interface Segregation Principle applies SRP to dependencies - limiting coupling and improving cohesion.'
 date: 2016-07-13
-archived: true
+status: archived
 ---
 
 In Part 1 we discussed the relationship between The Interface-Segregation Principle and The Single Responsibility Principle in terms of interfaces.

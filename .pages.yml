@@ -12,7 +12,7 @@ content:
     exclude:
       - blog.11tydata.js
     view:
-      fields: [title, date, archived]
+      fields: [title, date, status]
       primary: title
       sort: [date, title]
       default:
@@ -34,9 +34,17 @@ content:
         options:
           time: true
           format: yyyy-MM-dd'T'HH:mm
-      - name: archived
-        label: Archived
-        type: boolean
+      - name: status
+        label: Status
+        type: select
+        default: draft
+        options:
+          - value: draft
+            label: Draft
+          - value: published
+            label: Published
+          - value: archived
+            label: Archived
       - name: body
         label: Body
         type: rich-text
@@ -50,7 +58,7 @@ content:
       - notes.11tydata.js
     filename: "{year}-{month}-{day}-{hour}{minute}{second}.md"
     view:
-      fields: [date, body]
+      fields: [date, status, body]
       primary: body
       sort: [date]
       default:
@@ -64,6 +72,17 @@ content:
         options:
           time: true
           format: yyyy-MM-dd'T'HH:mm
+      - name: status
+        label: Status
+        type: select
+        default: draft
+        options:
+          - value: draft
+            label: Draft
+          - value: published
+            label: Published
+          - value: archived
+            label: Archived
       - name: body
         label: Body
         type: rich-text

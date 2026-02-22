@@ -2,7 +2,7 @@
 title: Lexical & Dynamic Scope
 description: 'Understanding the difference between lexical and dynamic scoping - how variable resolution differs based on code structure versus call stack.'
 date: 2016-08-09
-archived: true
+status: archived
 ---
 
 Take this snippet of pseudo-code

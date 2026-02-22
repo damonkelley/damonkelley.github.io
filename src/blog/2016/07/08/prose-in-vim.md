@@ -2,7 +2,7 @@
 title: "Prose in Vim"
 description: 'Useful Vim features for writing prose - sentence motions, spell checking, and display line navigation.'
 date: 2016-07-08
-archived: true
+status: archived
 ---
 
 As I have been writing more prose as of late, I have begun to get more use out of a few features that are built-in to Vim.

@@ -4,7 +4,7 @@ description: 'Breaking down the minimax algorithm for creating an unbeatable Tic
 date: 2016-06-28
 published: false
 tags:
-archived: true
+status: archived
 ---
 
 

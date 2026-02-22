@@ -2,7 +2,7 @@
 title: Text Editing Outside of Vim
 description: 'Realizing the importance of text editing fluency outside your favorite editor - being a generalist with tools too.'
 date: 2016-09-30
-archived: true
+status: archived
 ---
 
 There are a fair number of people at my company that use Vim. I feel confident saying that half, or even more than half use Vim. As a Vim user, it is pretty easy to jump into a pairing session with another Vim user, even if the `.vimrc` is nothing like mine. `hjkl` are still there.

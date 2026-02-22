@@ -2,7 +2,7 @@
 title: What does it mean to be small?
 description: 'Exploring the relationship between the Single Responsibility Principle and small classes - they may actually be the same thing.'
 date: 2016-07-21
-archived: true
+status: archived
 ---
 
 

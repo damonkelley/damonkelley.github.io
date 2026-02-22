@@ -2,7 +2,7 @@
 title: Where do interfaces come from?
 description: "Two patterns for introducing interfaces - replacing subclasses with injection and creating dependencies that don't exist yet."
 date: 2016-07-20
-archived: true
+status: archived
 ---
 
 As I am working more with Java and thinking about interfaces, I am starting to see some patterns in where and how interfaces can be introduced. Here are two patterns that I have seen.

@@ -7,7 +7,7 @@ description: "Writing, building, and thinking about how humans and software shap
 <div class="h-feed">
   <ul>
     {%- for article in collections.articles | reverse -%}
-    {%- if not article.data.archived -%}
+    {%- if article.data.status === "published" -%}
     <li class="h-entry">
       <a href="{{ article.url }}" class="u-url">
         <h2 class="p-name">{{ article.data.title }}</h2>

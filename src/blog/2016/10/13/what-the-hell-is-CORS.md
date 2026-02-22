@@ -2,7 +2,7 @@
 title: What the hell is CORS
 description: 'Demystifying Cross-Origin Resource Sharing (CORS) and the Same-origin Policy that protects web browsers from malicious sites.'
 date: 2016-10-13
-archived: true
+status: archived
 ---
 
 At some point you may have been going about your business coding up some JavaScript, and you encountered an error message regarding CORS or something about `Access-Control-Allow-Origin`. It seems that many developers do not fully understand CORS, which, historically, was the case for me as well.
