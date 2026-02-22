@@ -3,8 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ title }}</title>
-    <meta name="description" content="{{ description }}">
+    {% set pageTitle = title or ("Note by " + metadata.author.name) %}
+    {% set pageDescription = description or (content | excerpt) or metadata.description %}
+    <title>{{ pageTitle }}</title>
+    <meta name="description" content="{{ pageDescription }}">
+    <meta property="og:type" content="{{ 'article' if layout == 'post.njk' or layout == 'note.njk' else 'website' }}">
+    <meta property="og:title" content="{{ pageTitle }}">
+    <meta property="og:description" content="{{ pageDescription }}">
+    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+    <meta property="og:site_name" content="{{ metadata.title }}">
+    {% if heroImage %}<meta property="og:image" content="{{ metadata.url }}{{ heroImage }}">{% endif %}
+
+    <meta name="twitter:card" content="{{ 'summary_large_image' if heroImage else 'summary' }}">
+    <meta name="twitter:title" content="{{ pageTitle }}">
+    <meta name="twitter:description" content="{{ pageDescription }}">
+    {% if heroImage %}<meta name="twitter:image" content="{{ metadata.url }}{{ heroImage }}">{% endif %}
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="alternate" type="application/rss+xml" title="{{ metadata.title }}" href="/rss.xml">
     <link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin>

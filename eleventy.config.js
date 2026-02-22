@@ -14,7 +14,7 @@ export default function (eleventyConfig) {
     },
     metadata: {
       language: "en",
-      title: "damon kelley",
+      title: "Damon Kelley",
       subtitle:
         "Writing, building, and thinking about how humans and software shape each other.",
       base: "https://damonkelley.com/",
@@ -48,6 +48,12 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("year", () => {
     return new Date().getFullYear();
+  });
+
+  eleventyConfig.addFilter("excerpt", (content) => {
+    if (!content) return "";
+    const plain = content.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+    return plain.length > 200 ? plain.slice(0, 200) + "…" : plain;
   });
 
   return {
