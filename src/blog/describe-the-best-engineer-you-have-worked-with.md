@@ -2,7 +2,8 @@
 title: Describe the Best Engineer You Have Worked With
 description: Reflecting on the behaviors that I have admired in others.
 date: 2025-10-31T17:00
-status: draft
+status: published
+federate: true
 ---
 > _Describe the best engineer you've worked with. Why were they so great? What made them special?_
 
