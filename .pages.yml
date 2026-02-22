@@ -1,0 +1,62 @@
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: src/blog
+    format: yaml-frontmatter
+    exclude:
+      - blog.11tydata.js
+    view:
+      fields: [title, date, archived]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: archived
+        label: Archived
+        type: boolean
+      - name: body
+        label: Body
+        type: rich-text
+
+  - name: notes
+    label: Notes
+    type: collection
+    path: src/notes
+    format: yaml-frontmatter
+    exclude:
+      - notes.11tydata.js
+    filename: "{year}-{month}-{day}-{hour}{minute}{second}.md"
+    view:
+      fields: [date]
+      primary: date
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: body
+        label: Body
+        type: rich-text
