@@ -1,7 +1,7 @@
 ---
 title: Hello, world!
 description: Lorem ipsum
-date: 2026-02-22
+date: 2026-02-22T12:46
 archived: false
 ---
 # this is a test article
