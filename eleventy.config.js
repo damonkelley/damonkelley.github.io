@@ -39,6 +39,13 @@ export default function (eleventyConfig) {
     return plain.length > 200 ? plain.slice(0, 200) + "…" : plain;
   });
 
+  eleventyConfig.addFilter("readingTime", (content) => {
+    if (!content) return "";
+    const words = content.replace(/<[^>]+>/g, "").split(/\s+/).filter(Boolean).length;
+    const minutes = Math.ceil(words / 200);
+    return `${minutes} min read`;
+  });
+
   return {
     dir: {
       input: "src",

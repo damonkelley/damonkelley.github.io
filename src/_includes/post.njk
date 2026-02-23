@@ -3,7 +3,7 @@ layout: base.njk
 ---
 <article class="h-entry">
   <header>
-    <time class="dt-published" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+    <time class="dt-published" datetime="{{ date | htmlDateString }}">{{ date | readableDate }} — {{ content | readingTime }}</time>
     {% if updatedDate %}
     <p>Updated: <time class="dt-updated" datetime="{{ updatedDate | htmlDateString }}">{{ updatedDate | readableDate }}</time></p>
     {% endif %}
