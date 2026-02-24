@@ -14,10 +14,10 @@ description: "Writing, building, and thinking about how humans and software shap
         <time class="dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate }} — {{ item.content | readingTime }}</time>
       </a>
       {%- else -%}
-      <div class="e-content">{{ item.content | safe }}</div>
       <a href="{{ item.url }}" class="u-url">
         <time class="dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate }}</time>
       </a>
+      <div class="e-content">{{ item.content | safe }}</div>
       {%- endif -%}
     </li>
     {%- endfor -%}

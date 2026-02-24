@@ -8,10 +8,10 @@ description: "Short-form notes and thoughts."
   <ul>
     {%- for note in collections.notes | reverse -%}
     <li class="h-entry">
-      <div class="e-content">{{ note.content | safe }}</div>
       <a href="{{ note.url }}" class="u-url">
         <time class="dt-published" datetime="{{ note.date | htmlDateString }}">{{ note.date | readableDate }}</time>
       </a>
+      <div class="e-content">{{ note.content | safe }}</div>
     </li>
     {%- endfor -%}
   </ul>

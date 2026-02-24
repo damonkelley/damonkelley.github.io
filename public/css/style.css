@@ -49,8 +49,9 @@ body {
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 
@@ -74,6 +75,11 @@ body > header > a {
   font-weight: 725;
   letter-spacing: -0.02em;
   line-height: 1;
+}
+
+body > header a {
+  color: inherit;
+  text-decoration: none;
 }
 
 body > header > nav {
@@ -120,6 +126,8 @@ body > main {
 .h-feed .h-entry a.u-url {
   display: flex;
   flex-direction: column;
+  color: inherit;
+  text-decoration: none;
 }
 
 .h-feed .h-entry .dt-published {
@@ -283,11 +291,6 @@ article.h-entry .e-content img {
   border-radius: 4px;
 }
 
-article.h-entry .e-content a {
-  color: var(--color-accent);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
 
 article.h-entry .e-content hr {
   border: none;
@@ -303,11 +306,6 @@ main > article p {
   line-height: 1.6;
 }
 
-main > article a {
-  color: var(--color-accent);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
 
 
 /* ---- Writing page archive link ---- */
@@ -318,11 +316,6 @@ main > p {
   opacity: 0.7;
 }
 
-main > p a {
-  color: var(--color-accent);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
 
 
 /* ---- Footer ---- */
@@ -349,7 +342,10 @@ body > footer nav {
   margin-top: 8px;
 }
 
+
 body > footer nav a {
+  color: inherit;
+  text-decoration: none;
   font-size: var(--step--1);
   opacity: 0.7;
   transition: opacity 0.2s;
