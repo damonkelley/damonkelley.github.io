@@ -22,3 +22,14 @@ Items from [microformats-audit.md](./docs/microformats-audit.md):
 - [ ] Try out Sveltia CMS locally (added to `public/admin/`)
 - [ ] Set up authentication for production use (GitHub PAT or Netlify OAuth)
 - [ ] Decide whether to keep Sveltia CMS or Pages CMS (or both)
+ [ ] Set default sort order for collections (e.g., date descending)
+
+### Syndication
+
+- [ ] Show `u-syndication` links on posts ("Also on Bluesky / Mastodon")
+  - Bridgy Fed doesn't send syndication URLs back via webmention
+  - Options: query AT Protocol by DID, query ActivityPub, or add manually to frontmatter
+
+### Publishing
+
+ [ ] Set up scheduled posts
