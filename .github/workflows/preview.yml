@@ -21,16 +21,15 @@ jobs:
       - run: bun run build
 
       - name: Deploy preview
-        id: deploy
-        run: |
-          output=$(npx netlify-cli deploy --dir=_site --json)
-          echo "url=$(echo $output | jq -r '.deploy_url')" >> $GITHUB_OUTPUT
+        uses: nwtgck/actions-netlify@v3.0
+        with:
+          publish-dir: _site
+          production-deploy: false
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Preview for PR #${{ github.event.number }}"
+          enable-pull-request-comment: true
+          overwrites-pull-request-comment: true
+          enable-commit-comment: false
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-
-      - name: Comment preview URL
-        uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          message: |
-            🔗 Preview: ${{ steps.deploy.outputs.url }}

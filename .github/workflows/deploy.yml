@@ -18,9 +18,17 @@ jobs:
 
       - run: bun run build
 
-      - run: npx netlify-cli deploy --prod --dir=_site
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v3.0
+        with:
+          publish-dir: _site
+          production-deploy: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: ${{ github.event.head_commit.message }}
+          enable-pull-request-comment: false
+          enable-commit-comment: false
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
-      - run: npx @remy/webmention _site/rss.xml --limit 0 --send
+      - run: bunx @remy/webmention _site/rss.xml --limit 0 --send
