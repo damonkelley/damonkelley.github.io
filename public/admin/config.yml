@@ -1,0 +1,89 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: damonkelley/damonkelley.github.io
+  branch: main
+
+site_url: https://damonkelley.com
+
+media_folder: /public/images
+public_folder: /images
+
+collections:
+  - name: articles
+    label: Articles
+    label_singular: Article
+    icon: article
+    folder: src/blog
+    path: "{{date | date('YYYY')}}/{{date | date('MM')}}/{{date | date('DD')}}/{{slug}}"
+    format: yaml-frontmatter
+    sortable_fields:
+      - date
+      - title
+    summary: "{{title}} — {{date | date('YYYY-MM-DD')}}"
+    fields:
+      - name: title
+        label: Title
+        widget: string
+      - name: description
+        label: Description
+        widget: text
+      - name: date
+        label: Date
+        widget: datetime
+        format: YYYY-MM-DDTHH:mm
+        default: "{{now}}"
+      - name: status
+        label: Status
+        widget: select
+        default: draft
+        options:
+          - { label: Draft, value: draft }
+          - { label: Hidden, value: hidden }
+          - { label: Published, value: published }
+          - { label: Archived, value: archived }
+      - name: federate
+        label: Federate
+        widget: boolean
+        default: true
+      - name: body
+        label: Body
+        widget: markdown
+
+  - name: notes
+    label: Notes
+    label_singular: Note
+    icon: sticky_note_2
+    folder: src/notes
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}{{minute}}{{second}}"
+    format: yaml-frontmatter
+    identifier_field: date
+    sortable_fields:
+      - date
+    summary: "{{body | truncate(80, '…')}}"
+    fields:
+      - name: date
+        label: Date
+        widget: datetime
+        format: YYYY-MM-DDTHH:mm
+        default: "{{now}}"
+      - name: status
+        label: Status
+        widget: select
+        default: draft
+        options:
+          - { label: Draft, value: draft }
+          - { label: Hidden, value: hidden }
+          - { label: Published, value: published }
+          - { label: Archived, value: archived }
+      - name: federate
+        label: Federate
+        widget: boolean
+        default: true
+      - name: body
+        label: Body
+        widget: markdown
+        minimal: true
+        buttons: [bold, italic, strikethrough, code, link]
+        editor_components: [image]
