@@ -16,6 +16,7 @@ Items from [microformats-audit.md](./docs/microformats-audit.md):
 - [ ] Add `u-photo` (avatar) to h-card in footer
 - [ ] Support `p-category` for hashtags
 - [ ] Add `u-uid` to h-entry on articles and notes
+ [ ] Add proper h-card (u-url, u-photo avatar, u-featured header)
 
 ### CMS
 
@@ -23,6 +24,8 @@ Items from [microformats-audit.md](./docs/microformats-audit.md):
 - [ ] Set up authentication for production use (GitHub PAT or Netlify OAuth)
 - [ ] Decide whether to keep Sveltia CMS or Pages CMS (or both)
  [x] Set default sort order for collections (date descending)
+ [ ] Add about page to CMS
+ [ ] Media backend?
 
 ### Syndication
 
@@ -33,3 +36,13 @@ Items from [microformats-audit.md](./docs/microformats-audit.md):
 ### Publishing
 
  [ ] Set up scheduled posts
+
+### Automation
+
+ [ ] Add an agent to create PRs based on vale findings
+ [ ] Add LinkedIn automation
+ [ ] AI todo automation
+ [ ] Note cards
+ [ ] TIL category
+ [ ] Favicon
+ [ ] Styles
