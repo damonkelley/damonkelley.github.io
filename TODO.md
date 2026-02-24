@@ -46,3 +46,4 @@ Items from [microformats-audit.md](./docs/microformats-audit.md):
  [ ] TIL category
  [ ] Favicon
  [ ] Styles
+ [ ] Change profile description (in `metadata.json`, also hardcoded in `index.njk` and `writing.njk`)
