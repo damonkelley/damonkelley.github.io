@@ -19,8 +19,12 @@ collections:
     path: "{{date | date('YYYY')}}/{{date | date('MM')}}/{{date | date('DD')}}/{{slug}}"
     format: yaml-frontmatter
     sortable_fields:
-      - date
-      - title
+      fields:
+        - date
+        - title
+      default:
+        field: date
+        direction: descending
     summary: "{{title}} — {{date | date('YYYY-MM-DD')}}"
     fields:
       - name: title
@@ -60,9 +64,19 @@ collections:
     format: yaml-frontmatter
     identifier_field: date
     sortable_fields:
-      - date
+      fields:
+        - date
+      default:
+        field: date
+        direction: descending
     summary: "{{body | truncate(80, '…')}}"
     fields:
+      - name: body
+        label: Body
+        widget: markdown
+        minimal: true
+        buttons: [bold, italic, strikethrough, code, link]
+        editor_components: [image]
       - name: date
         label: Date
         widget: datetime
@@ -71,7 +85,7 @@ collections:
       - name: status
         label: Status
         widget: select
-        default: draft
+        default: published
         options:
           - { label: Draft, value: draft }
           - { label: Hidden, value: hidden }
@@ -81,9 +95,3 @@ collections:
         label: Federate
         widget: boolean
         default: true
-      - name: body
-        label: Body
-        widget: markdown
-        minimal: true
-        buttons: [bold, italic, strikethrough, code, link]
-        editor_components: [image]
