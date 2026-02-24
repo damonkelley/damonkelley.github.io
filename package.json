@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy",
-    "preview": "eleventy --serve"
+    "preview": "eleventy --serve",
+    "vale": "vale sync && vale --no-exit src/blog/202* src/notes"
   },
   "type": "module"
 }
