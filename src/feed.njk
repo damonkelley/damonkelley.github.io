@@ -6,7 +6,7 @@ eleventyExcludeFromCollections: true
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.description }}</subtitle>
-  <link href="{{ metadata.url }}rss.xml" rel="self" />
+  <link href="{{ metadata.url }}/rss.xml" rel="self" />
   <link href="{{ metadata.url }}" />
   <updated>{{ collections.feed | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ metadata.url }}</id>
