@@ -1,0 +1,36 @@
+name: Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "1.3.2"
+
+      - run: bun install --frozen-lockfile
+
+      - run: bun run build
+
+      - name: Deploy preview
+        id: deploy
+        run: |
+          output=$(npx netlify-cli deploy --dir=_site --json)
+          echo "url=$(echo $output | jq -r '.deploy_url')" >> $GITHUB_OUTPUT
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+      - name: Comment preview URL
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          message: |
+            🔗 Preview: ${{ steps.deploy.outputs.url }}
