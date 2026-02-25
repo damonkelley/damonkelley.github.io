@@ -12,6 +12,7 @@ description: "Writing, building, and thinking about how humans and software shap
         <a href="{{ item.url }}"><time class="dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate }} — {{ item.content | readingTime }}</time></a>
         <h2 class="p-name"><a class="u-url" href="{{ item.url }}">{{ item.data.title }}</a></h2>
         <p class="p-summary">{{ item.data.description }}</p>
+        <a class="read-more" href="{{ item.url }}">Read more →</a>
       </article>
       {%- else -%}
       {% set entryUrl = item.url %}{% set entryDate = item.date %}{% set entryContent = item.content %}{% set entryStatus = item.data.status %}{% set entryFederate = item.data.federate %}{% set entryPhotos = item.data.photos %}

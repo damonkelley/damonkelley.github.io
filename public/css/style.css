@@ -198,6 +198,15 @@ body > main {
 }
 
 
+.h-feed .h-entry .read-more {
+  font-size: var(--step--1);
+  text-decoration: none;
+}
+
+.h-feed .h-entry .read-more:hover {
+  text-decoration: underline;
+}
+
 /* ---- Section headings (writing, micro, about, archive pages) ---- */
 
 main > h1,

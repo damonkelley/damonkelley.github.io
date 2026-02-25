@@ -13,6 +13,7 @@ description: "Writing, building, and thinking about how humans and software shap
         <a href="{{ article.url }}"><time class="dt-published" datetime="{{ article.date | htmlDateString }}">{{ article.date | readableDate }} — {{ article.content | readingTime }}</time></a>
         <h2 class="p-name"><a class="u-url" href="{{ article.url }}">{{ article.data.title }}</a></h2>
         <p class="p-summary">{{ article.data.description }}</p>
+        <a class="read-more" href="{{ article.url }}">Read more →</a>
       </article>
     </li>
     {%- endif -%}
