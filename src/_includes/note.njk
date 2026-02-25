@@ -1,6 +1,6 @@
 <article class="h-entry">
   <a class="u-url" href="{{ entryUrl }}">
-    <time class="dt-published" datetime="{{ entryDate | htmlDateString }}">{{ entryDate | readableDate }}</time>
+    <time class="dt-published" datetime="{{ entryDate | htmlDateString }}">{{ entryDate | readableDateTime }}</time>
   </a>
   <div class="e-content">
     {{ entryContent | safe }}

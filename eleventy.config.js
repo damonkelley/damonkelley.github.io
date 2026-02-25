@@ -25,6 +25,17 @@ export default function (eleventyConfig) {
     });
   });
 
+  eleventyConfig.addFilter("readableDateTime", (dateObj) => {
+    return new Date(dateObj).toLocaleDateString("en-us", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      timeZone: "UTC",
+    });
+  });
+
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     return new Date(dateObj).toISOString();
   });
