@@ -47,3 +47,9 @@ Items from [microformats-audit.md](./docs/microformats-audit.md):
  [ ] Favicon
  [ ] Styles
  [ ] Change profile description (in `metadata.json`, also hardcoded in `index.njk` and `writing.njk`)
+
+### Agents
+
+ [ ] Add frontend web expert agent
+ [ ] Add microformats and IndieWeb expert agent
+ [ ] Add fediverse expert agent
