@@ -7,6 +7,10 @@ export default {
     eleventyExcludeFromCollections: (data) =>
       data.status === "draft" || data.status === "hidden",
     permalink: (data) => data.status === "draft" ? false : data.permalink,
+    ogImage: (data) => {
+      if (data.photos && data.photos.length > 0) return data.photos[0].url;
+      return null;
+    },
     description: (data) => {
       if (data.description) return data.description;
       const raw = data.page?.rawInput || "";

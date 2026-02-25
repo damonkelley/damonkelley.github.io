@@ -28,4 +28,4 @@ Both are written in Markdown with YAML frontmatter. Managed via [Pages CMS](http
 
 - OpenGraph and Twitter Card meta tags on all pages
 - Default OG image (`public/images/og-default.png`) used when no `heroImage` is set
-- `p-summary` on articles and notes for clean Bridgy Fed/Bluesky display
+- Microformats2 properties (`u-url`, `dt-published`, `p-name`, `e-content`) are on visible elements — no hidden duplicates

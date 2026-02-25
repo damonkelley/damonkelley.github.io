@@ -14,7 +14,7 @@ description: "Writing, building, and thinking about how humans and software shap
         <p class="p-summary">{{ item.data.description }}</p>
       </article>
       {%- else -%}
-      {% set entryUrl = item.url %}{% set entryDate = item.date %}{% set entryContent = item.content %}{% set entryStatus = item.data.status %}{% set entryFederate = item.data.federate %}
+      {% set entryUrl = item.url %}{% set entryDate = item.date %}{% set entryContent = item.content %}{% set entryStatus = item.data.status %}{% set entryFederate = item.data.federate %}{% set entryPhotos = item.data.photos %}
       {% include "note.njk" %}
       {%- endif -%}
     </li>

@@ -5,5 +5,8 @@
   <div class="e-content">
     {{ entryContent | safe }}
   </div>
+  {%- if entryPhotos %}{% for photo in entryPhotos %}
+  <img class="u-photo" src="{{ photo.url }}" alt="{{ photo.alt }}" loading="lazy">
+  {%- endfor %}{% endif %}
   {% if entryStatus === "published" and entryFederate %}<a class="u-bridgy-fed" href="https://fed.brid.gy/" hidden></a>{% endif %}
 </article>

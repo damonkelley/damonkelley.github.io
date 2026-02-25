@@ -21,7 +21,7 @@ eleventyExcludeFromCollections: true
     <link href="{{ absolutePostUrl }}" />
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(metadata.url) }}{% if post.data.federate %}&lt;a class="u-bridgy-fed" href="https://fed.brid.gy/" hidden&gt;&lt;/a&gt;{% endif %}</content>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(metadata.url) }}{% if post.data.photos %}{% for photo in post.data.photos %}&lt;img class="u-photo" src="{{ metadata.url }}{{ photo.url }}" alt="{{ photo.alt }}" /&gt;{% endfor %}{% endif %}{% if post.data.federate %}&lt;a class="u-bridgy-fed" href="https://fed.brid.gy/" hidden&gt;&lt;/a&gt;{% endif %}</content>
   </entry>
   {%- endfor %}
 </feed>

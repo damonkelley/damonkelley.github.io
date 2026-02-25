@@ -77,6 +77,17 @@ collections:
         minimal: true
         buttons: [bold, italic, strikethrough, code, link]
         editor_components: [image]
+      - name: photos
+        label: Photos
+        widget: list
+        required: false
+        fields:
+          - name: url
+            label: Image
+            widget: image
+          - name: alt
+            label: Alt text
+            widget: string
       - name: date
         label: Date
         widget: datetime

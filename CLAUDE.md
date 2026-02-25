@@ -24,17 +24,18 @@ bun run bridge:sync:send # Send delete webmentions for orphaned posts
 
 - **Articles** live in `src/blog/` organized by `year/month/day/` directory structure
   - Markdown with frontmatter: `title`, `description`, `date` (datetime), `updatedDate` (optional), `heroImage` (optional), `archived` (optional)
-  - `src/blog/blog.11tydata.js` assigns the `post.njk` layout and `articles` tag
+  - `src/blog/blog.11tydata.js` assigns the `layouts/post.njk` layout and `articles` tag
 - **Notes** live in `src/notes/` named by datetime (e.g. `2026-02-22-095737.md`)
   - Markdown with frontmatter: `date` (datetime, required)
   - No title — short-form content only
-  - `src/notes/notes.11tydata.js` assigns the `note.njk` layout, `notes` tag, and auto-generates `description` via `eleventyComputed`
+  - `src/notes/notes.11tydata.js` assigns the `layouts/note.njk` layout, `notes` tag, and auto-generates `description` via `eleventyComputed`
 
 ### Templates (Nunjucks)
 
-- `src/_includes/base.njk` — Base HTML shell (head, header, footer, OG/Twitter meta tags)
-- `src/_includes/post.njk` — Article layout (h-entry, p-summary, u-bridgy-fed, webmentions)
-- `src/_includes/note.njk` — Note layout (h-entry, p-summary, u-bridgy-fed, webmentions)
+- `src/_includes/layouts/base.njk` — Base HTML shell (head, header, footer, OG/Twitter meta tags)
+- `src/_includes/layouts/post.njk` — Article layout (h-entry, u-bridgy-fed, webmentions)
+- `src/_includes/layouts/note.njk` — Note layout (sets variables, includes shared note partial + webmentions)
+- `src/_includes/note.njk` — Shared note partial (h-entry with u-url, dt-published, e-content, u-bridgy-fed); used by note layout and feed listing pages
 - `src/_includes/webmentions.njk` — Client-side webmention fetch and display
 - `src/index.njk` — Homepage (interleaved feed of all content)
 - `src/writing.njk` — Articles-only listing
@@ -62,14 +63,14 @@ bun run bridge:sync:send # Send delete webmentions for orphaned posts
 
 ### IndieWeb / Bridgy Fed
 - Microformats2: `h-entry` on articles/notes, `h-card` in footer, `h-feed` on listing pages
+- All microformat properties (`u-url`, `dt-published`, `p-name`, `e-content`) are on visible elements — no hidden duplicates
 - Webmentions: received via webmention.io, displayed via client-side JS in `webmentions.njk`
 - Bridgy Fed: bridges site to fediverse and Bluesky via webmention-only mode
-  - `u-bridgy-fed` link in article/note templates (outside `e-content`, inside `h-entry` to avoid Mastodon link previews)
+  - `u-bridgy-fed` link in article/note templates (hidden, inside `h-entry` — no visible equivalent)
   - `u-bridgy-fed` link also in RSS feed `<content>` (in `src/feed.njk`) so webmention.app can discover it
   - **New posts**: automated via webmention.app Netlify webhook (deploy succeeded → scans RSS → sends webmentions)
   - **Deleted posts**: run `bun run bridge:sync:send` after deleting content and deploying (posts must return 404 first)
   - DID: `did:plc:h7u3m47syy7vkuewhms6oest`
-- `p-summary`: present on articles (from `description`) and notes (from truncated content) for clean federation
 
 ### Social Metadata
 

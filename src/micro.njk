@@ -8,7 +8,7 @@ description: "Short-form notes and thoughts."
   <ul>
     {%- for note in collections.notes | reverse -%}
     <li>
-      {% set entryUrl = note.url %}{% set entryDate = note.date %}{% set entryContent = note.content %}{% set entryStatus = note.data.status %}{% set entryFederate = note.data.federate %}
+      {% set entryUrl = note.url %}{% set entryDate = note.date %}{% set entryContent = note.content %}{% set entryStatus = note.data.status %}{% set entryFederate = note.data.federate %}{% set entryPhotos = note.data.photos %}
       {% include "note.njk" %}
     </li>
     {%- endfor -%}

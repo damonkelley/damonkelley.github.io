@@ -12,9 +12,9 @@
     <meta property="og:description" content="{{ pageDescription }}">
     <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
     <meta property="og:site_name" content="{{ metadata.title }}">
-    {% set pageImage = heroImage or "/images/og-default.png" %}
+    {% set pageImage = heroImage or ogImage or "/images/og-default.png" %}
     <meta property="og:image" content="{{ metadata.url }}{{ pageImage }}">
-    <meta name="twitter:card" content="{{ 'summary_large_image' if heroImage else 'summary' }}">
+    <meta name="twitter:card" content="{{ 'summary_large_image' if (heroImage or ogImage) else 'summary' }}">
     <meta name="twitter:title" content="{{ pageTitle }}">
     <meta name="twitter:description" content="{{ pageDescription }}">
     <meta name="twitter:image" content="{{ metadata.url }}{{ pageImage }}">

@@ -336,6 +336,20 @@ article.h-entry .e-content hr {
 }
 
 
+/* ---- u-photo (notes with attached images) ---- */
+
+article.h-entry > .u-photo {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+}
+
+.h-feed .h-entry > .u-photo {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+}
+
 /* ---- About page ---- */
 
 main > article p {
