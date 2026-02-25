@@ -1,23 +1,21 @@
 ---
-layout: base.njk
+layout: layouts/base.njk
 title: Damon Kelley
 description: "Writing, building, and thinking about how humans and software shape each other."
 ---
 <div class="h-feed">
   <ul>
     {%- for item in collections.feed -%}
-    <li class="h-entry">
+    <li>
       {%- if item.data.title -%}
-      <a href="{{ item.url }}" class="u-url">
-        <h2 class="p-name">{{ item.data.title }}</h2>
+      <article class="h-entry">
+        <a href="{{ item.url }}"><time class="dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate }} — {{ item.content | readingTime }}</time></a>
+        <h2 class="p-name"><a class="u-url" href="{{ item.url }}">{{ item.data.title }}</a></h2>
         <p class="p-summary">{{ item.data.description }}</p>
-        <time class="dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate }} — {{ item.content | readingTime }}</time>
-      </a>
+      </article>
       {%- else -%}
-      <a href="{{ item.url }}" class="u-url">
-        <time class="dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate }}</time>
-      </a>
-      <div class="e-content">{{ item.content | safe }}</div>
+      {% set entryUrl = item.url %}{% set entryDate = item.date %}{% set entryContent = item.content %}{% set entryStatus = item.data.status %}{% set entryFederate = item.data.federate %}
+      {% include "note.njk" %}
       {%- endif -%}
     </li>
     {%- endfor -%}

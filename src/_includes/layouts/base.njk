@@ -7,7 +7,7 @@
     {% set pageDescription = description or (content | excerpt) or metadata.description %}
     <title>{{ pageTitle }}</title>
     <meta name="description" content="{{ pageDescription }}">
-    <meta property="og:type" content="{{ 'article' if layout == 'post.njk' or layout == 'note.njk' else 'website' }}">
+    <meta property="og:type" content="{{ 'article' if layout == 'layouts/post.njk' or layout == 'layouts/note.njk' else 'website' }}">
     <meta property="og:title" content="{{ pageTitle }}">
     <meta property="og:description" content="{{ pageDescription }}">
     <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">

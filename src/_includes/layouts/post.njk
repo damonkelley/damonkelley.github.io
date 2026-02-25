@@ -1,9 +1,11 @@
 ---
-layout: base.njk
+layout: layouts/base.njk
 ---
 <article class="h-entry">
   <header>
-    <time class="dt-published" datetime="{{ date | htmlDateString }}">{{ date | readableDate }} — {{ content | readingTime }}</time>
+    <a class="u-url" href="{{ page.url }}">
+      <time class="dt-published" datetime="{{ date | htmlDateString }}">{{ date | readableDate }} — {{ content | readingTime }}</time>
+    </a>
     {% if updatedDate %}
     <p>Updated: <time class="dt-updated" datetime="{{ updatedDate | htmlDateString }}">{{ updatedDate | readableDate }}</time></p>
     {% endif %}
@@ -12,9 +14,6 @@ layout: base.njk
   <div class="e-content">
     {{ content | safe }}
   </div>
-  <p class="p-summary" hidden>{{ description or (content | excerpt) }}</p>
-  <a class="u-url" href="{{ page.url }}" hidden></a>
-  <a class="p-author h-card" href="/" hidden>{{ metadata.author.name }}</a>
   {% if status === "published" and federate %}<a class="u-bridgy-fed" href="https://fed.brid.gy/" hidden></a>{% endif %}
 </article>
 {% include "webmentions.njk" %}

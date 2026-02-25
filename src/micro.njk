@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: layouts/base.njk
 title: Micro
 description: "Short-form notes and thoughts."
 ---
@@ -7,11 +7,9 @@ description: "Short-form notes and thoughts."
 <div class="h-feed">
   <ul>
     {%- for note in collections.notes | reverse -%}
-    <li class="h-entry">
-      <a href="{{ note.url }}" class="u-url">
-        <time class="dt-published" datetime="{{ note.date | htmlDateString }}">{{ note.date | readableDate }}</time>
-      </a>
-      <div class="e-content">{{ note.content | safe }}</div>
+    <li>
+      {% set entryUrl = note.url %}{% set entryDate = note.date %}{% set entryContent = note.content %}{% set entryStatus = note.data.status %}{% set entryFederate = note.data.federate %}
+      {% include "note.njk" %}
     </li>
     {%- endfor -%}
   </ul>

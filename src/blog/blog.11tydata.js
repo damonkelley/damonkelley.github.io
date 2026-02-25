@@ -1,5 +1,5 @@
 export default {
-  layout: "post.njk",
+  layout: "layouts/post.njk",
   tags: "articles",
   status: "draft",
   federate: true,

@@ -1,5 +1,5 @@
 export default {
-  layout: "note.njk",
+  layout: "layouts/note.njk",
   tags: "notes",
   status: "draft",
   federate: true,

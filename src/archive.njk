@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: layouts/base.njk
 title: Archive
 description: "Archived blog posts"
 ---
@@ -8,12 +8,12 @@ description: "Archived blog posts"
   <ul>
     {%- for post in collections.articles | reverse -%}
     {%- if post.data.status === "archived" -%}
-    <li class="h-entry">
-      <a href="{{ post.url }}" class="u-url">
-        <h2 class="p-name">{{ post.data.title }}</h2>
+    <li>
+      <article class="h-entry">
+        <a href="{{ post.url }}"><time class="dt-published" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></a>
+        <h2 class="p-name"><a class="u-url" href="{{ post.url }}">{{ post.data.title }}</a></h2>
         <p class="p-summary">{{ post.data.description }}</p>
-        <time class="dt-published" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-      </a>
+      </article>
     </li>
     {%- endif -%}
     {%- endfor -%}

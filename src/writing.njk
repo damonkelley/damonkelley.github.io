@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: layouts/base.njk
 title: Writing
 description: "Writing, building, and thinking about how humans and software shape each other."
 ---
@@ -8,12 +8,12 @@ description: "Writing, building, and thinking about how humans and software shap
   <ul>
     {%- for article in collections.articles | reverse -%}
     {%- if article.data.status === "published" -%}
-    <li class="h-entry">
-      <a href="{{ article.url }}" class="u-url">
-        <h2 class="p-name">{{ article.data.title }}</h2>
+    <li>
+      <article class="h-entry">
+        <a href="{{ article.url }}"><time class="dt-published" datetime="{{ article.date | htmlDateString }}">{{ article.date | readableDate }} — {{ article.content | readingTime }}</time></a>
+        <h2 class="p-name"><a class="u-url" href="{{ article.url }}">{{ article.data.title }}</a></h2>
         <p class="p-summary">{{ article.data.description }}</p>
-        <time class="dt-published" datetime="{{ article.date | htmlDateString }}">{{ article.date | readableDate }} — {{ article.content | readingTime }}</time>
-      </a>
+      </article>
     </li>
     {%- endif -%}
     {%- endfor -%}
